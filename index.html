@@ -1,0 +1,3120 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://www.lncc.br/~borges/php/testar.html#planos -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streamings Liberados &#127916; - Assine Já!</title>
+    <link href="./Streamings Liberados_files/css2" rel="stylesheet">
+    <link rel="stylesheet" href="./Streamings Liberados_files/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* ===== BARRA TOP WHATSAPP ===== */
+        .top-bar {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            animation: pulseBar 2s infinite;
+        }
+
+        @keyframes pulseBar {
+            0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7); }
+        }
+
+        .top-bar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 25px;
+            border: 2px solid #fff;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+
+        .top-bar a:hover {
+            background: #fff;
+            color: #25D366;
+            transform: scale(1.05);
+        }
+
+        .top-bar i {
+            font-size: 22px;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            margin-top: 55px;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(180deg, #0a0a0a 0%, #1a0a2e 50%, #0a0a0a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(229, 9, 20, 0.3), transparent);
+            top: -100px;
+            right: -100px;
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(37, 211, 102, 0.2), transparent);
+            bottom: -50px;
+            left: -50px;
+            border-radius: 50%;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #e50914, #ff6b6b, #25D366);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #ccc;
+            max-width: 700px;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #e50914, #b20710);
+            color: #fff;
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        /* ===== VIDEO SECTION ===== */
+        .video-section {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .video-section h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #FF0000, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .video-section p {
+            color: #aaa;
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 */
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(255, 0, 0, 0.25);
+            border: 3px solid rgba(255, 0, 0, 0.4);
+            transition: all 0.4s;
+        }
+
+        .video-wrapper:hover {
+            transform: scale(1.02);
+            box-shadow: 0 25px 80px rgba(255, 0, 0, 0.4);
+            border-color: #FF0000;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 0, 0, 0.15);
+            color: #FF0000;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-top: 20px;
+            border: 1px solid rgba(255, 0, 0, 0.3);
+        }
+
+        .video-badge i {
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        /* ===== PRODUCTS ===== */
+        .products {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .products h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #fff, #aaa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .products .subtitle {
+            text-align: center;
+            color: #888;
+            font-size: 1.1rem;
+            margin-bottom: 50px;
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: linear-gradient(145deg, #1a1a2e, #16213e);
+            border-radius: 20px;
+            padding: 35px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s;
+            border: 2px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: #e50914;
+            box-shadow: 0 20px 60px rgba(229, 9, 20, 0.3);
+        }
+
+        .card.featured {
+            border: 2px solid #25D366;
+            box-shadow: 0 0 40px rgba(37, 211, 102, 0.2);
+        }
+
+        .card.featured-yt {
+            border: 2px solid #FF0000;
+            box-shadow: 0 0 50px rgba(255, 0, 0, 0.3);
+            background: linear-gradient(145deg, #2a0a0a, #1a0505);
+        }
+
+        .card.featured-yt:hover {
+            border-color: #FF0000;
+            box-shadow: 0 20px 60px rgba(255, 0, 0, 0.4);
+        }
+
+        .card.featured::before {
+            content: '&#128293; MAIS VENDIDO';
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: #fff;
+            padding: 5px 40px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            transform: rotate(45deg);
+        }
+
+        .card.featured-yt::before {
+            content: '&#11088; MELHOR CUSTO-BENEFÍCIO';
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            background: linear-gradient(135deg, #FF0000, #CC0000);
+            color: #fff;
+            padding: 5px 40px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            transform: rotate(45deg);
+        }
+
+        .card .icon {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .card .desc {
+            color: #aaa;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .card .price {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: #25D366;
+            margin-bottom: 5px;
+        }
+
+        .card.featured-yt .price {
+            color: #FF0000;
+        }
+
+        .card .price span {
+            font-size: 1.2rem;
+            color: #888;
+            font-weight: 400;
+        }
+
+        .card .old-price {
+            text-decoration: line-through;
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .card .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 35px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .card .btn-whatsapp:hover {
+            transform: scale(1.08);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        .card .btn-whatsapp.yt-btn {
+            background: linear-gradient(135deg, #FF0000, #CC0000);
+        }
+
+        .card .btn-whatsapp.yt-btn:hover {
+            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.5);
+        }
+
+        .card .bonus {
+            display: inline-block;
+            background: rgba(255, 193, 7, 0.2);
+            color: #ffc107;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        /* ===== FLOATING WHATSAPP ===== */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .floating-whatsapp a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            border-radius: 50%;
+            color: #fff;
+            font-size: 32px;
+            text-decoration: none;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+            transition: all 0.3s;
+        }
+
+        .floating-whatsapp a:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 40px rgba(37, 211, 102, 0.7);
+        }
+
+        .floating-whatsapp .tooltip {
+            position: absolute;
+            right: 80px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #fff;
+            color: #333;
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            display: none;
+        }
+
+        .floating-whatsapp:hover .tooltip {
+            display: block;
+        }
+
+        /* ===== FEATURES ===== */
+        .features {
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(180deg, #0a0a0a, #0f0f23);
+        }
+
+        .features h2 {
+            margin-bottom: 40px;
+            font-size: 2rem;
+            background: linear-gradient(135deg, #fff, #aaa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .features-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .feature-item i {
+            font-size: 2.5rem;
+            color: #25D366;
+            margin-bottom: 10px;
+        }
+
+        .feature-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .feature-item p {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #555;
+            font-size: 0.85rem;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .card {
+                padding: 25px 20px;
+            }
+            .top-bar a {
+                font-size: 14px;
+                padding: 6px 18px;
+            }
+            .floating-whatsapp {
+                bottom: 20px;
+                right: 20px;
+            }
+            .floating-whatsapp a {
+                width: 55px;
+                height: 55px;
+                font-size: 26px;
+            }
+
+            .video-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .video-section p {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== NOTIFICAÇÃO DE ASSINATURAS EM TEMPO REAL ===== -->
+<div id="notif-bar" style="position: fixed; top: 0px; left: 0px; width: 100%; z-index: 999999; background: linear-gradient(135deg, rgb(26, 26, 46) 0%, rgb(22, 33, 62) 50%, rgb(15, 52, 96) 100%); padding: 10px 16px; text-align: center; font-family: &quot;Segoe UI&quot;, Tahoma, Geneva, Verdana, sans-serif; box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 20px; display: none; animation: 0.5s ease-out 0s 1 normal none running slideDown;">
+  <div style="
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    color: #fff;
+    font-size: 14px;
+  ">
+    <span id="notif-dot" style="
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: #00ff88;
+      border-radius: 50%;
+      animation: pulse 1.5s infinite;
+      flex-shrink: 0;
+    "></span>
+    <span id="notif-text" style="
+      font-weight: 500;
+      line-height: 1.4;
+    ">
+      <strong style="color:#00ff88;">Karina G.</strong>
+      &#127916; Recebeu YouTube Premium Família
+    </span>
+  </div>
+</div>
+
+<style>
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(0,255,136,0.7); }
+  70%  { box-shadow: 0 0 0 10px rgba(0,255,136,0); }
+  100% { box-shadow: 0 0 0 0 rgba(0,255,136,0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsivo */
+#notif-bar { font-size: 13px; padding: 8px 12px; }
+#notif-bar span { font-size: 13px; }
+
+@media (max-width: 480px) {
+  #notif-bar { padding: 7px 10px; }
+  #notif-bar span { font-size: 12px; }
+  #notif-dot { width: 8px; height: 8px; }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  #notif-bar span { font-size: 13.5px; }
+}
+</style>
+
+<script>
+(function() {
+  // ========== CONFIGURE AQUI ==========
+  const NOMES = [
+"Alessandra M.", "Aline C.", "Alice F.", "Amanda T.", "Ana Clara P.",
+"Andreia L.", "Ângela R.", "Ariana G.", "Barbara N.", "Bianca V.",
+"Brenda S.", "Carla D.", "Carolina H.", "Cássia B.", "Cecília A.",
+"Cláudia T.", "Cristiane P.", "Daiane F.", "Débora M.", "Denise C.",
+"Eduarda R.", "Elaine G.", "Elisa K.", "Ellen V.", "Emanuela S.",
+"Emily D.", "Erika N.", "Ester L.", "Fabiana O.", "Fernanda J.",
+"Flávia P.", "Franciele T.", "Gabriela C.", "Geovana F.", "Giovana M.",
+"Gisele A.", "Graziele R.", "Helena B.", "Ingrid P.", "Isadora N.",
+"Jaqueline D.", "Jéssica V.", "Joana C.", "Júlia H.", "Karen S.",
+"Karina G.", "Kelly T.", "Larissa F.", "Laura M.", "Letícia B.",
+"Lívia R.", "Lorena D.", "Luana V.", "Luciana A.", "Manuela P.",
+"Marcela N.", "Mariana C.", "Melissa H.", "Milena S.", "Mirela G.",
+"Mônica T.", "Natália F.", "Nicole D.", "Paula V.", "Priscila A.",
+"Rafaela P.", "Raquel N.", "Rebeca C.", "Roberta H.", "Rosana S.",
+"Sabrina G.", "Samara T.", "Sandra F.", "Sheila D.", "Simone V.",
+"Sofia A.", "Solange P.", "Suzana N.", "Talita C.", "Tamara H.",
+"Tânia S.", "Valéria G.", "Vanessa T.", "Verônica F.", "Vitória D.",
+"Yasmin V.", "Adriano B.", "Alan P.", "Alberto N.", "Alexandre C.",
+"Anderson H.", "Antônio S.", "Arthur G.", "Bernardo T.", "Caio F.",
+"César D.", "Christian V.", "Cristiano A.", "Danilo P.", "Davi N.",
+"Douglas C.", "Edson H.", "Elias S.", "Emerson G.", "Enzo T.",
+"Fabiano F.", "Fábio D.", "Fernando V.", "Francisco A.", "Gabriel P.",
+"Gilberto N.", "Guilherme C.", "Heitor H.", "Hugo S.", "Igor G.",
+"Isaac T.", "Ivan F.", "Jefferson D.", "João V.", "Jonathan A.",
+"Jorge P.", "José N.", "Kevin C.", "Leonardo H.", "Levi S.",
+"Luciano G.", "Luiz T.", "Marcelo F.", "Márcio D.", "Mateus V.",
+"Matheus A.", "Maurício P.", "Murilo N.", "Nathan C.", "Nicolas H.",
+"Otávio S.", "Paulo G.", "Ricardo T.", "Roberto F.", "Rodrigo D.",
+"Samuel V.", "Sandro A.", "Sérgio P.", "Tiago N.", "Victor C.",
+"Vinícius H.", "Wagner S.", "Wallace G.", "Wellington T.", "William F."
+  ];
+
+  const PRODUTOS = [
+    { nome: "Assinou", emoji: "&#128308;" },
+    { nome: "Recebeu", emoji: "&#127916;" },
+    { nome: "Ganhou de bônus", emoji: "&#11088;" },
+    { nome: "Adquiriu", emoji: "&#128293;" },
+    { nome: "Renovou", emoji: "&#128142;" },
+    { nome: "Assinou 2 meses de", emoji: "&#128640;" },
+    { nome: "Recebeu agora mesmo", emoji: "&#128640;" },
+    { nome: "Adquiriu hoje", emoji: "&#128640;" },
+    { nome: "Renovou 3 meses de", emoji: "&#128640;" },
+    { nome: "Garantiu", emoji: "&#127919;" },
+    { nome: "Ativou", emoji: "&#9889;" },
+    { nome: "Confirmou", emoji: "&#9989;" },
+    { nome: "Liberou acesso a", emoji: "&#128275;" },
+    { nome: "Aproveitou", emoji: "&#127881;" },
+    { nome: "Escolheu", emoji: "&#128250;" },
+    { nome: "Contratou", emoji: "&#128176;" },
+    { nome: "Pegou a oferta de", emoji: "&#127991;&#65039;" },
+    { nome: "Recebeu acesso a", emoji: "&#127873;" },
+    { nome: "Garantiu acesso a", emoji: "&#128640;" },
+    { nome: "Assinou hoje", emoji: "&#128197;" },
+    { nome: "Renovou hoje", emoji: "&#128260;" },
+    { nome: "Ativou agora", emoji: "&#9889;" },
+    { nome: "Finalizou a compra de", emoji: "&#128722;" },
+    { nome: "Concluiu a assinatura de", emoji: "&#128242;" },
+    { nome: "Garantiu sua vaga em", emoji: "&#127903;&#65039;" },
+    { nome: "Recebeu o plano", emoji: "&#128230;" },
+    { nome: "Escolheu o pacote", emoji: "&#128250;" },
+    { nome: "Liberou seu acesso em", emoji: "&#128275;" },
+    { nome: "Comprou", emoji: "&#128179;" },
+    { nome: "Solicitou", emoji: "&#128232;" },
+    { nome: "Confirmou o acesso a", emoji: "&#128274;" },
+    { nome: "Recebeu gratuitamente", emoji: "&#127873;" },
+    { nome: "Garantiu o desconto em", emoji: "&#128184;" },
+    { nome: "Aproveitou a promoção de", emoji: "&#127942;" },
+    { nome: "Recebeu acesso premium a", emoji: "&#128142;" },
+    { nome: "Assinou o plano", emoji: "&#128203;" },
+    { nome: "Renovou o pacote", emoji: "&#9851;&#65039;" },
+    { nome: "Garantiu o combo", emoji: "&#127871;" },
+    { nome: "Ativou o combo", emoji: "&#127916;" },
+    { nome: "Liberou o pacote", emoji: "&#128230;" },
+    { nome: "Contratou hoje", emoji: "&#128467;&#65039;" },
+    { nome: "Fez a assinatura de", emoji: "&#9997;&#65039;" },
+    { nome: "Recebeu acesso imediato a", emoji: "&#9889;" },
+    { nome: "Garantiu sua assinatura de", emoji: "&#127919;" },
+    { nome: "Ativou seu plano de", emoji: "&#128640;" },
+    { nome: "Recebeu seu acesso de", emoji: "&#128232;" },
+    { nome: "Confirmou sua renovação de", emoji: "&#128260;" },
+    { nome: "Comprou hoje", emoji: "&#128181;" },
+    { nome: "Fez pedido de", emoji: "&#128230;" },
+    { nome: "Recebeu seu bônus em", emoji: "&#11088;" },
+    { nome: "Ganhou acesso a", emoji: "&#127881;" },
+    { nome: "Assinou 3 meses de", emoji: "&#128640;" },
+    { nome: "Assinou 6 meses de", emoji: "&#128640;" },
+    { nome: "Assinou 12 meses de", emoji: "&#128640;" },
+    { nome: "Renovou 1 mês de", emoji: "&#128640;" },
+    { nome: "Renovou 6 meses de", emoji: "&#128640;" },
+    { nome: "Renovou 12 meses de", emoji: "&#128640;" },
+    { nome: "Concluiu o pagamento de", emoji: "&#128179;" },
+    { nome: "Finalizou a renovação de", emoji: "&#128260;" },
+    { nome: "Recebeu sua assinatura de", emoji: "&#128250;" },
+    { nome: "Adquiriu o combo de", emoji: "&#127871;" },
+    { nome: "Garantiu o melhor plano de", emoji: "&#127942;" },
+    { nome: "Recebeu o plano premium de", emoji: "&#128142;" },
+    { nome: "Aproveitou o combo de", emoji: "&#127916;" },
+    { nome: "Liberou sua assinatura de", emoji: "&#128275;" },
+    { nome: "Recebeu instantaneamente", emoji: "&#9889;" },
+    { nome: "Adquiriu com desconto", emoji: "&#128184;" },
+    { nome: "Renovou com desconto", emoji: "&#127991;&#65039;" },
+    { nome: "Confirmou sua compra de", emoji: "&#128722;" },
+    { nome: "Ativou sua renovação de", emoji: "&#9851;&#65039;" },
+    { nome: "Concluiu seu pedido de", emoji: "&#128230;" },
+    { nome: "Garantiu sua renovação de", emoji: "&#127919;" },
+    { nome: "Recebeu seu combo de", emoji: "&#127871;" },
+    { nome: "Recebeu benefícios de", emoji: "&#11088;" },
+    { nome: "Aproveitou os benefícios de", emoji: "&#128293;" },
+    { nome: "Garantiu a promoção de", emoji: "&#127881;" },
+    { nome: "Recebeu a promoção de", emoji: "&#127882;" },
+    { nome: "Contratou o plano anual de", emoji: "&#128198;" },
+    { nome: "Contratou o plano mensal de", emoji: "&#128197;" },
+    { nome: "Recebeu acesso exclusivo a", emoji: "&#128272;" },
+    { nome: "Garantiu acesso exclusivo a", emoji: "&#128142;" },
+    { nome: "Escolheu o plano premium de", emoji: "&#11088;" },
+    { nome: "Adquiriu acesso completo a", emoji: "&#128250;" },
+    { nome: "Recebeu acesso completo a", emoji: "&#127916;" },
+    { nome: "Garantiu acesso completo a", emoji: "&#127942;" },
+    { nome: "Ativou acesso imediato a", emoji: "&#9889;" },
+  ];
+
+  const FRASES = [
+    "YouTube Premium Família",
+    "Netflix Conta Completa",
+    "Paramount+",
+    "Netflix tela privada",
+    "Canais liberados",  
+  ];
+
+  // Intervalo entre notificações (ms) - quanto menor, mais rápido
+  const INTERVALO_MIN = 4000;
+  const INTERVALO_MAX = 9000;
+  // =====================================
+
+  const bar = document.getElementById('notif-bar');
+  const text = document.getElementById('notif-text');
+  const dot = document.getElementById('notif-dot');
+
+  if (!bar) return;
+
+  function randomItem(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+  }
+
+  function showNotification() {
+    const nome = randomItem(NOMES);
+    const produto = randomItem(PRODUTOS);
+    const frase = randomItem(FRASES);
+
+    text.innerHTML = `
+      <strong style="color:#00ff88;">${nome}</strong>
+      ${produto.emoji} ${produto.nome} ${frase}
+    `;
+
+    bar.style.display = 'block';
+    dot.style.background = '#00ff88';
+
+    // Auto-esconde após 5 segundos
+    setTimeout(() => {
+      bar.style.display = 'none';
+    }, 5000);
+  }
+
+  // Mostra primeira notificação rapidamente
+  setTimeout(showNotification, 1500);
+
+  // Loop infinito
+  function scheduleNext() {
+    const delay = INTERVALO_MIN + Math.random() * (INTERVALO_MAX - INTERVALO_MIN);
+    setTimeout(() => {
+      showNotification();
+      scheduleNext();
+    }, delay);
+  }
+  scheduleNext();
+})();
+</script>
+<!-- ===== FIM DA NOTIFICAÇÃO ===== -->
+
+<!-- ===== BOTÃO ÂNCORA - PLANOS (FUNCIONA EM TUDO) ===== -->
+<div style="
+    text-align: center;
+    margin: 30px auto 10px;
+    max-width: 600px;
+    padding: 0 20px;
+">
+    <a href="https://www.lncc.br/~borges/php/testar.html#planos" onclick="event.preventDefault(); 
+                document.querySelector(&#39;#planos&#39;).scrollIntoView({behavior:&#39;smooth&#39;, block:&#39;start&#39;}); 
+                return false;" id="plan-btn" style="
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: linear-gradient(135deg, #e50914, #b20710);
+        color: #fff;
+        text-decoration: none;
+        padding: 16px 40px;
+        border-radius: 50px;
+        font-family: &#39;Poppins&#39;, sans-serif;
+        font-weight: 700;
+        font-size: clamp(1rem, 3.5vw, 1.15rem);
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 20px rgba(229, 9, 20, 0.35);
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        border: 2px solid rgba(255,255,255,0.15);
+        position: relative;
+        overflow: hidden;
+        -webkit-tap-highlight-color: transparent;
+        min-height: 52px;
+        cursor: pointer;
+    ">
+        <span style="font-size: 1.3rem;"></span>
+        &#128269; Ver Planos 
+        <span style="font-size: 1.3rem;"></span>
+    </a>
+</div>
+
+<style>
+/* ===== SMOOTH SCROLL GLOBAL ===== */
+html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* ===== BOTÃO - TODOS OS DISPOSITIVOS ===== */
+#plan-btn {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    touch-action: manipulation;
+}
+
+/* Desktop hover */
+#plan-btn:hover {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 8px 30px rgba(229, 9, 20, 0.5);
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Mobile/Tablet active (toque) */
+#plan-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 10px rgba(229, 9, 20, 0.4);
+    transition: all 0.1s;
+}
+
+/* Animação de pulso suave */
+@keyframes planPulse {
+    0%, 100% { box-shadow: 0 4px 20px rgba(229, 9, 20, 0.35); }
+    50% { box-shadow: 0 6px 28px rgba(229, 9, 20, 0.5); }
+}
+
+#plan-btn {
+    animation: planPulse 2.5s ease-in-out infinite;
+}
+
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #plan-btn {
+        padding: 14px 36px;
+        font-size: 1.05rem;
+    }
+}
+
+/* Mobile pequeno (até 480px) */
+@media (max-width: 480px) {
+    #plan-btn {
+        padding: 14px 28px;
+        font-size: 1rem;
+        gap: 8px;
+    }
+    #plan-btn span {
+        font-size: 1.1rem;
+    }
+}
+
+/* Mobile muito pequeno (até 360px) */
+@media (max-width: 360px) {
+    #plan-btn {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+}
+</style>
+
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>STREAMINGS <span class="highlight">LIBERADOS</span><br>POR PREÇOS <span class="highlight">INACREDITÁVEIS!</span></h1>
+        <p>Filmes, séries, canais ao vivo e muito mais — tudo liberado na sua tela por uma fração do preço. Sem fidelidade, sem burocracia!</p>
+
+
+<hr style="border: none; height: 1px; background: currentColor; opacity: 0.2; margin: 25px 0;">
+
+<!-- ============================================================ -->
+<!--  NETFLIX-STYLE MOVIE CAROUSEL - COPY & PASTE READY           -->
+<!--  Substitua TMDB_API_KEY e LINK_ASSISTIR antes de usar        -->
+<!-- ============================================================ -->
+
+<style>
+  #netflix-slider-wrapper {
+    --ns-bg: #141414;
+    --ns-card-bg: #1a1a1a;
+    --ns-accent: #e50914;
+    --ns-accent-hover: #ff1a25;
+    --ns-text: #ffffff;
+    --ns-text-secondary: #b3b3b3;
+    --ns-rating-bg: rgba(0,0,0,0.7);
+    --ns-overlay: linear-gradient(to top, rgba(20,20,20,0.95) 0%, rgba(20,20,20,0.4) 50%, transparent 100%);
+    --ns-card-radius: 12px;
+    --ns-transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--ns-bg);
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  #netflix-slider-wrapper * {
+    box-sizing: border-box;
+  }
+
+  .netflix-slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 50px;
+  }
+
+  .netflix-slider-track {
+    display: flex;
+    gap: 18px;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+  }
+
+  .netflix-slider-card {
+    min-width: 220px;
+    max-width: 220px;
+    flex-shrink: 0;
+    border-radius: var(--ns-card-radius);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: var(--ns-transition);
+    background: var(--ns-card-bg);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  }
+
+  .netflix-slider-card:hover {
+    transform: scale(1.05) translateY(-8px);
+    z-index: 10;
+    box-shadow: 0 12px 40px rgba(229, 9, 20, 0.3);
+  }
+
+  .netflix-slider-poster {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    display: block;
+    transition: var(--ns-transition);
+  }
+
+  .netflix-slider-card:hover .netflix-slider-poster {
+    filter: brightness(0.7);
+  }
+
+  .netflix-slider-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--ns-overlay);
+    padding: 20px 15px 15px;
+    transform: translateY(60%);
+    transition: var(--ns-transition);
+  }
+
+  .netflix-slider-card:hover .netflix-slider-overlay {
+    transform: translateY(0);
+  }
+
+  .netflix-slider-movie-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ns-text);
+    margin: 0 0 6px 0;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .netflix-slider-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+
+  .netflix-slider-rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--ns-rating-bg);
+    color: #ffd700;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+
+  .netflix-slider-year {
+    color: var(--ns-text-secondary);
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  .netflix-slider-synopsis {
+    font-size: 0.78rem;
+    color: var(--ns-text-secondary);
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
+  .netflix-slider-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--ns-accent);
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--ns-transition);
+    text-decoration: none;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .netflix-slider-btn:hover {
+    background: var(--ns-accent-hover);
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(229, 9, 20, 0.5);
+  }
+
+  .netflix-slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    background: rgba(20, 20, 20, 0.85);
+    border: 2px solid rgba(255,255,255,0.15);
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.4rem;
+    transition: var(--ns-transition);
+    backdrop-filter: blur(10px);
+  }
+
+  .netflix-slider-arrow:hover {
+    background: var(--ns-accent);
+    border-color: var(--ns-accent);
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .netflix-slider-arrow-left {
+    left: 0;
+  }
+
+  .netflix-slider-arrow-right {
+    right: 0;
+  }
+
+  .netflix-slider-loading {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--ns-text-secondary);
+    font-size: 1.1rem;
+  }
+
+  .netflix-slider-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(255,255,255,0.1);
+    border-top-color: var(--ns-accent);
+    border-radius: 50%;
+    animation: ns-spin 0.8s linear infinite;
+    margin: 0 auto 20px;
+  }
+
+  @keyframes ns-spin {
+    to { transform: rotate(360deg); }
+  }
+
+  .netflix-slider-error {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--ns-accent);
+    font-size: 1.1rem;
+  }
+
+  .netflix-slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 25px;
+  }
+
+  .netflix-slider-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    cursor: pointer;
+    transition: var(--ns-transition);
+  }
+
+  .netflix-slider-dot.active {
+    background: var(--ns-accent);
+    transform: scale(1.3);
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1200px) {
+    .netflix-slider-card { min-width: 200px; max-width: 200px; }
+    .netflix-slider-poster { height: 300px; }
+  }
+
+  @media (max-width: 992px) {
+    #netflix-slider-wrapper { padding: 30px 0; }
+    .netflix-slider-container { padding: 0 40px; }
+    .netflix-slider-card { min-width: 180px; max-width: 180px; }
+    .netflix-slider-poster { height: 270px; }
+    .netflix-slider-arrow { width: 42px; height: 42px; font-size: 1.2rem; }
+  }
+
+  @media (max-width: 768px) {
+    .netflix-slider-container { padding: 0 35px; }
+    .netflix-slider-card { min-width: 150px; max-width: 150px; }
+    .netflix-slider-poster { height: 230px; }
+    .netflix-slider-overlay { padding: 15px 10px 10px; }
+    .netflix-slider-movie-title { font-size: 0.85rem; }
+    .netflix-slider-synopsis { font-size: 0.72rem; -webkit-line-clamp: 2; }
+    .netflix-slider-btn { padding: 6px 10px; font-size: 0.72rem; }
+    .netflix-slider-arrow { width: 36px; height: 36px; font-size: 1rem; }
+    .netflix-slider-arrow-left { left: 5px; }
+    .netflix-slider-arrow-right { right: 5px; }
+  }
+
+  @media (max-width: 480px) {
+    #netflix-slider-wrapper { padding: 20px 0; }
+    .netflix-slider-container { padding: 0 30px; }
+    .netflix-slider-card { min-width: 130px; max-width: 130px; }
+    .netflix-slider-poster { height: 200px; }
+    .netflix-slider-overlay { padding: 12px 8px 8px; }
+    .netflix-slider-movie-title { font-size: 0.78rem; }
+    .netflix-slider-rating { font-size: 0.7rem; padding: 2px 6px; }
+    .netflix-slider-year { font-size: 0.72rem; }
+    .netflix-slider-synopsis { display: none; }
+    .netflix-slider-btn { padding: 5px 8px; font-size: 0.68rem; }
+    .netflix-slider-arrow { width: 32px; height: 32px; font-size: 0.9rem; }
+  }
+</style>
+
+<div id="netflix-slider-wrapper">
+  <div class="netflix-slider-container" id="netflix-slider-container">
+    <div class="netflix-slider-arrow netflix-slider-arrow-left" id="netflix-slider-prev" aria-label="Anterior">&#9664;</div>
+    <div class="netflix-slider-track" id="netflix-slider-track" style="transform: translateX(-952px);"><div class="netflix-slider-card" data-index="0">
+        <img class="netflix-slider-poster" src="./Streamings Liberados_files/wUc6IDf5ChjM1UyQye21qFBeJY0.jpg" alt="Obsessão" loading="lazy">
+        <div class="netflix-slider-overlay">
+          <h3 class="netflix-slider-movie-title">Obsessão</h3>
+          <div class="netflix-slider-meta">
+            <span class="netflix-slider-rating">&#11088; 7.9</span>
+            <span class="netflix-slider-year">2026</span>
+          </div>
+          <p class="netflix-slider-synopsis">Sem grandes pretensões, um romântico incurável compra um brinquedo que promete realizar desejos únicos. Ele quebra o art...</p>
+          <a class="netflix-slider-btn" href="https://wa.me/5596991169102?text=Ola!%20gostaria%20de%20adquirir%20um%20dos%20conteudos!" target="_blank" rel="noopener noreferrer">
+            &#9654; Assistir Agora
+          </a>
+        </div>
+      </div><div class="netflix-slider-card" data-index="1">
+        <img class="netflix-slider-poster" src="./Streamings Liberados_files/ubN87iHY2DyWtwU2JHS0SQ1KqJu.jpg" alt="Maldição da Múmia" loading="lazy">
+        <div class="netflix-slider-overlay">
+          <h3 class="netflix-slider-movie-title">Maldição da Múmia</h3>
+          <div class="netflix-slider-meta">
+            <span class="netflix-slider-rating">&#11088; 8.1</span>
+            <span class="netflix-slider-year">2026</span>
+          </div>
+          <p class="netflix-slider-synopsis">A filha de um jornalista desaparece num deserto sem deixar rastros, deixando a família dilacerada e em luto. Até que, oi...</p>
+          <a class="netflix-slider-btn" href="https://wa.me/5596991169102?text=Ola!%20gostaria%20de%20adquirir%20um%20dos%20conteudos!" target="_blank" rel="noopener noreferrer">
+            &#9654; Assistir Agora
+          </a>
+        </div>
+      </div><div class="netflix-slider-card" data-index="2">
+        <img class="netflix-slider-poster" src="./Streamings Liberados_files/uIrFdMWlJFdc1jPBP9bxeaISCDj.jpg" alt="&#2965;&#2992;" loading="lazy">
+        <div class="netflix-slider-overlay">
+          <h3 class="netflix-slider-movie-title">&#2965;&#2992;</h3>
+          <div class="netflix-slider-meta">
+            <span class="netflix-slider-rating">&#11088; 6.1</span>
+            <span class="netflix-slider-year">2026</span>
+          </div>
+          <p class="netflix-slider-synopsis">Sinopse não disponível.</p>
+          <a class="netflix-slider-btn" href="https://wa.me/5596991169102?text=Ola!%20gostaria%20de%20adquirir%20um%20dos%20conteudos!" target="_blank" rel="noopener noreferrer">
+            &#9654; Assistir Agora
+          </a>
+        </div>
+      </div><div class="netflix-slider-card" data-index="3">
+        <img class="netflix-slider-poster" src="./Streamings Liberados_files/a1pgQeEge47xrS4jGlDwIHiieVK.jpg" alt="Backrooms: Um Não-Lugar" loading="lazy">
+        <div class="netflix-slider-overlay">
+          <h3 class="netflix-slider-movie-title">Backrooms: Um Não-Lugar</h3>
+          <div class="netflix-slider-meta">
+            <span class="netflix-slider-rating">&#11088; 6.8</span>
+            <span class="netflix-slider-year">2026</span>
+          </div>
+          <p class="netflix-slider-synopsis">Em 1990, o vendedor de móveis Clark descobre em sua loja um portal para os "Backrooms", um labirinto infinito de escritó...</p>
+          <a class="netflix-slider-btn" href="https://wa.me/5596991169102?text=Ola!%20gostaria%20de%20adquirir%20um%20dos%20conteudos!" target="_blank" rel="noopener noreferrer">
+            &#9654; Assistir Agora
+          </a>
+        </div>
+      </div><div class="netflix-slider-card" data-index="4">
+        <img class="netflix-slider-poster" src="./Streamings Liberados_files/bPue4NKPiGNrIbZFeOsZfnovFAM.jpg" alt="Jack Ryan de Tom Clancy: Guerra Fantasma" loading="lazy">
+        <div class="netflix-slider-overlay">
+          <h3 class="netflix-slider-movie-title">Jack Ryan de Tom Clancy: Guerra Fantasma</h3>
+          <div class="netflix-slider-meta">
+            <span class="netflix-slider-rating">&#11088; 7.1</span>
+            <span class="netflix-slider-year">2026</span>
+          </div>
+          <p class="netflix-slider-synopsis">Neste novo filme, Jack Ryan volta ao mundo da espionagem contra a sua vontade quando uma missão secreta internacional ac...</p>
+          <a class="netflix-slider-btn" href="https://wa.me/5596991169102?text=Ola!%20gostaria%20de%20adquirir%20um%20dos%20conteudos!" target="_blank" rel="noopener noreferrer">
+            &#9654; Assistir Agora
+          </a>
+        </div>
+      </div><div class="netflix-slider-card" data-index="5">
+        <img class="netflix-slider-poster" src="./Streamings Liberados_files/ppRmgI2MbEOADvKKvlNoRJHPXOT.jpg" alt="O Justiceiro: Uma Última Morte" loading="lazy">
+        <div class="netflix-slider-overlay">
+          <h3 class="netflix-slider-movie-title">O Justiceiro: Uma Última Morte</h3>
+          <div class="netflix-slider-meta">
+            <span class="netflix-slider-rating">&#11088; 8.4</span>
+            <span class="netflix-slider-year">2026</span>
+          </div>
+          <p class="netflix-slider-synopsis">Enquanto Frank Castle busca um significado além da vingança, uma força inesperada o arrasta de volta para a luta.</p>
+          <a class="netflix-slider-btn" href="https://wa.me/5596991169102?text=Ola!%20gostaria%20de%20adquirir%20um%20dos%20conteudos!" target="_blank" rel="noopener noreferrer">
+            &#9654; Assistir Agora
+          </a>
+        </div>
+      </div><div class="netflix-slider-card" data-index="6">
+        <img class="netflix-slider-poster" src="./Streamings Liberados_files/7pIgFNoX07z7alHt73TSsKRtYye.jpg" alt="Devoradores de Estrelas" loading="lazy" data-src="https://image.tmdb.org/t/p/w500/7pIgFNoX07z7alHt73TSsKRtYye.jpg">
+        <div class="netflix-slider-overlay">
+          <h3 class="netflix-slider-movie-title">Devoradores de Estrelas</h3>
+          <div class="netflix-slider-meta">
+            <span class="netflix-slider-rating">&#11088; 8.7</span>
+            <span class="netflix-slider-year">2026</span>
+          </div>
+          <p class="netflix-slider-synopsis">Professor de ciências do ensino fundamental acorda em espaçonave a anos-luz da Terra sem memória de como foi parar ali. ...</p>
+          <a class="netflix-slider-btn" href="https://wa.me/5596991169102?text=Ola!%20gostaria%20de%20adquirir%20um%20dos%20conteudos!" target="_blank" rel="noopener noreferrer">
+            &#9654; Assistir Agora
+          </a>
+        </div>
+      </div><div class="netflix-slider-card" data-index="7">
+        <img class="netflix-slider-poster" src="./Streamings Liberados_files/b3WeTp42eJSRuE4UZfyPCOJW4c.jpg" alt="Super Mario Galaxy: O Filme" loading="lazy" data-src="https://image.tmdb.org/t/p/w500/b3WeTp42eJSRuE4UZfyPCOJW4c.jpg">
+        <div class="netflix-slider-overlay">
+          <h3 class="netflix-slider-movie-title">Super Mario Galaxy: O Filme</h3>
+          <div class="netflix-slider-meta">
+            <span class="netflix-slider-rating">&#11088; 8.1</span>
+            <span class="netflix-slider-year">2026</span>
+          </div>
+          <p class="netflix-slider-synopsis">Depois de salvar o Reino dos Cogumelos, Mario e seus amigos se encontram em uma missão intergaláctica para deter um novo...</p>
+          <a class="netflix-slider-btn" href="https://wa.me/5596991169102?text=Ola!%20gostaria%20de%20adquirir%20um%20dos%20conteudos!" target="_blank" rel="noopener noreferrer">
+            &#9654; Assistir Agora
+          </a>
+        </div>
+      </div><div class="netflix-slider-card" data-index="8">
+        <img class="netflix-slider-poster" src="./Streamings Liberados_files/hsJG5r6etrMNwW00BVp4NC7zi67.jpg" alt="Dhurandhar: A Vingança" loading="lazy" data-src="https://image.tmdb.org/t/p/w500/hsJG5r6etrMNwW00BVp4NC7zi67.jpg">
+        <div class="netflix-slider-overlay">
+          <h3 class="netflix-slider-movie-title">Dhurandhar: A Vingança</h3>
+          <div class="netflix-slider-meta">
+            <span class="netflix-slider-rating">&#11088; 7.3</span>
+            <span class="netflix-slider-year">2026</span>
+          </div>
+          <p class="netflix-slider-synopsis">Sinopse não disponível.</p>
+          <a class="netflix-slider-btn" href="https://wa.me/5596991169102?text=Ola!%20gostaria%20de%20adquirir%20um%20dos%20conteudos!" target="_blank" rel="noopener noreferrer">
+            &#9654; Assistir Agora
+          </a>
+        </div>
+      </div><div class="netflix-slider-card" data-index="9">
+        <img class="netflix-slider-poster" src="./Streamings Liberados_files/5YGxIzMxRdcTt4QtjlbV2wYRNlx.jpg" alt="Coração Partido" loading="lazy" data-src="https://image.tmdb.org/t/p/w500/5YGxIzMxRdcTt4QtjlbV2wYRNlx.jpg">
+        <div class="netflix-slider-overlay">
+          <h3 class="netflix-slider-movie-title">Coração Partido</h3>
+          <div class="netflix-slider-meta">
+            <span class="netflix-slider-rating">&#11088; 6.8</span>
+            <span class="netflix-slider-year">2026</span>
+          </div>
+          <p class="netflix-slider-synopsis">Polina, uma estudante do ensino médio, é salva do bullying em sua nova escola e faz um acordo com o principal valentão, ...</p>
+          <a class="netflix-slider-btn" href="https://wa.me/5596991169102?text=Ola!%20gostaria%20de%20adquirir%20um%20dos%20conteudos!" target="_blank" rel="noopener noreferrer">
+            &#9654; Assistir Agora
+          </a>
+        </div>
+      </div><div class="netflix-slider-card" data-index="10">
+        <img class="netflix-slider-poster" src="./Streamings Liberados_files/9OA6y2GdbXuJ5PAMMMawNBIkrZA.jpg" alt="&#3349;&#3390;&#3359;&#3405;&#3359;&#3390;&#3379;&#3451;" loading="lazy" data-src="https://image.tmdb.org/t/p/w500/9OA6y2GdbXuJ5PAMMMawNBIkrZA.jpg">
+        <div class="netflix-slider-overlay">
+          <h3 class="netflix-slider-movie-title">&#3349;&#3390;&#3359;&#3405;&#3359;&#3390;&#3379;&#3451;</h3>
+          <div class="netflix-slider-meta">
+            <span class="netflix-slider-rating">&#11088; 7.2</span>
+            <span class="netflix-slider-year">2026</span>
+          </div>
+          <p class="netflix-slider-synopsis">Sinopse não disponível.</p>
+          <a class="netflix-slider-btn" href="https://wa.me/5596991169102?text=Ola!%20gostaria%20de%20adquirir%20um%20dos%20conteudos!" target="_blank" rel="noopener noreferrer">
+            &#9654; Assistir Agora
+          </a>
+        </div>
+      </div><div class="netflix-slider-card" data-index="11">
+        <img class="netflix-slider-poster" src="./Streamings Liberados_files/7FBnCkYzHlVHEtuzTEiGgFhs8EQ.jpg" alt="Como Mágica" loading="lazy" data-src="https://image.tmdb.org/t/p/w500/7FBnCkYzHlVHEtuzTEiGgFhs8EQ.jpg">
+        <div class="netflix-slider-overlay">
+          <h3 class="netflix-slider-movie-title">Como Mágica</h3>
+          <div class="netflix-slider-meta">
+            <span class="netflix-slider-rating">&#11088; 9.0</span>
+            <span class="netflix-slider-year">2026</span>
+          </div>
+          <p class="netflix-slider-synopsis">Uma pequena criatura da floresta e um pássaro majestoso trocam de corpo e precisam se unir para sobreviver à aventura ma...</p>
+          <a class="netflix-slider-btn" href="https://wa.me/5596991169102?text=Ola!%20gostaria%20de%20adquirir%20um%20dos%20conteudos!" target="_blank" rel="noopener noreferrer">
+            &#9654; Assistir Agora
+          </a>
+        </div>
+      </div><div class="netflix-slider-card" data-index="12">
+        <img class="netflix-slider-poster" src="./Streamings Liberados_files/lDqMDI3xpbB9UQRyeXfei0MXhqb.jpg" alt="Matrix" loading="lazy" data-src="https://image.tmdb.org/t/p/w500/lDqMDI3xpbB9UQRyeXfei0MXhqb.jpg">
+        <div class="netflix-slider-overlay">
+          <h3 class="netflix-slider-movie-title">Matrix</h3>
+          <div class="netflix-slider-meta">
+            <span class="netflix-slider-rating">&#11088; 8.2</span>
+            <span class="netflix-slider-year">1999</span>
+          </div>
+          <p class="netflix-slider-synopsis">O jovem programador Thomas Anderson é atormentado por estranhos pesadelos em que está sempre conectado por cabos a um im...</p>
+          <a class="netflix-slider-btn" href="https://wa.me/5596991169102?text=Ola!%20gostaria%20de%20adquirir%20um%20dos%20conteudos!" target="_blank" rel="noopener noreferrer">
+            &#9654; Assistir Agora
+          </a>
+        </div>
+      </div><div class="netflix-slider-card" data-index="13">
+        <img class="netflix-slider-poster" src="./Streamings Liberados_files/wqdHjQ1UpfQgS9jN9So5PLNTwoX.jpg" alt="A Sombra do Perigo" loading="lazy" data-src="https://image.tmdb.org/t/p/w500/wqdHjQ1UpfQgS9jN9So5PLNTwoX.jpg">
+        <div class="netflix-slider-overlay">
+          <h3 class="netflix-slider-movie-title">A Sombra do Perigo</h3>
+          <div class="netflix-slider-meta">
+            <span class="netflix-slider-rating">&#11088; 7.6</span>
+            <span class="netflix-slider-year">2025</span>
+          </div>
+          <p class="netflix-slider-synopsis">Um policial aposentado, especialista em rastreamento, é convocado de volta à ativa em Macau para desmantelar uma gangue ...</p>
+          <a class="netflix-slider-btn" href="https://wa.me/5596991169102?text=Ola!%20gostaria%20de%20adquirir%20um%20dos%20conteudos!" target="_blank" rel="noopener noreferrer">
+            &#9654; Assistir Agora
+          </a>
+        </div>
+      </div><div class="netflix-slider-card" data-index="14">
+        <img class="netflix-slider-poster" src="./Streamings Liberados_files/9LPkXJustudEBgPZEm9tgDx5KtC.jpg" alt="&#2330;&#2366;&#2305;&#2342; &#2350;&#2375;&#2352;&#2366; &#2342;&#2367;&#2354;" loading="lazy" data-src="https://image.tmdb.org/t/p/w500/9LPkXJustudEBgPZEm9tgDx5KtC.jpg">
+        <div class="netflix-slider-overlay">
+          <h3 class="netflix-slider-movie-title">&#2330;&#2366;&#2305;&#2342; &#2350;&#2375;&#2352;&#2366; &#2342;&#2367;&#2354;</h3>
+          <div class="netflix-slider-meta">
+            <span class="netflix-slider-rating">&#11088; 3.8</span>
+            <span class="netflix-slider-year">2026</span>
+          </div>
+          <p class="netflix-slider-synopsis">Sinopse não disponível.</p>
+          <a class="netflix-slider-btn" href="https://wa.me/5596991169102?text=Ola!%20gostaria%20de%20adquirir%20um%20dos%20conteudos!" target="_blank" rel="noopener noreferrer">
+            &#9654; Assistir Agora
+          </a>
+        </div>
+      </div><div class="netflix-slider-card" data-index="15">
+        <img class="netflix-slider-poster" src="./Streamings Liberados_files/l8tUMXgpEtSHuHjipX3rrOtCfe1.jpg" alt="Hokum: O Pesadelo da Bruxa" loading="lazy" data-src="https://image.tmdb.org/t/p/w500/l8tUMXgpEtSHuHjipX3rrOtCfe1.jpg">
+        <div class="netflix-slider-overlay">
+          <h3 class="netflix-slider-movie-title">Hokum: O Pesadelo da Bruxa</h3>
+          <div class="netflix-slider-meta">
+            <span class="netflix-slider-rating">&#11088; 7.0</span>
+            <span class="netflix-slider-year">2026</span>
+          </div>
+          <p class="netflix-slider-synopsis">O escritor solitário Ohm Bauman refugia-se em um hotel isolado para cumprir o último desejo de seus pais. A despedida si...</p>
+          <a class="netflix-slider-btn" href="https://wa.me/5596991169102?text=Ola!%20gostaria%20de%20adquirir%20um%20dos%20conteudos!" target="_blank" rel="noopener noreferrer">
+            &#9654; Assistir Agora
+          </a>
+        </div>
+      </div><div class="netflix-slider-card" data-index="16">
+        <img class="netflix-slider-poster" src="./Streamings Liberados_files/nMUcWDevmYy4gM0L5ZAt2OBFACC.jpg" alt="Iron Lung: Oceano de Sangue" loading="lazy" data-src="https://image.tmdb.org/t/p/w500/nMUcWDevmYy4gM0L5ZAt2OBFACC.jpg">
+        <div class="netflix-slider-overlay">
+          <h3 class="netflix-slider-movie-title">Iron Lung: Oceano de Sangue</h3>
+          <div class="netflix-slider-meta">
+            <span class="netflix-slider-rating">&#11088; 7.2</span>
+            <span class="netflix-slider-year">2026</span>
+          </div>
+          <p class="netflix-slider-synopsis">Após o desaparecimento das estrelas e planetas, restam apenas sobreviventes em estações e naves espaciais. Em meio à dec...</p>
+          <a class="netflix-slider-btn" href="https://wa.me/5596991169102?text=Ola!%20gostaria%20de%20adquirir%20um%20dos%20conteudos!" target="_blank" rel="noopener noreferrer">
+            &#9654; Assistir Agora
+          </a>
+        </div>
+      </div><div class="netflix-slider-card" data-index="17">
+        <img class="netflix-slider-poster" src="./Streamings Liberados_files/lEvNC9J2UzWc3PkptXMGcGVxSNq.jpg" alt="&#30436;&#32114;&#27934;" loading="lazy" data-src="https://image.tmdb.org/t/p/w500/lEvNC9J2UzWc3PkptXMGcGVxSNq.jpg">
+        <div class="netflix-slider-overlay">
+          <h3 class="netflix-slider-movie-title">&#30436;&#32114;&#27934;</h3>
+          <div class="netflix-slider-meta">
+            <span class="netflix-slider-rating">&#11088; 5.7</span>
+            <span class="netflix-slider-year">1967</span>
+          </div>
+          <p class="netflix-slider-synopsis">Sinopse não disponível.</p>
+          <a class="netflix-slider-btn" href="https://wa.me/5596991169102?text=Ola!%20gostaria%20de%20adquirir%20um%20dos%20conteudos!" target="_blank" rel="noopener noreferrer">
+            &#9654; Assistir Agora
+          </a>
+        </div>
+      </div><div class="netflix-slider-card" data-index="18">
+        <img class="netflix-slider-poster" src="./Streamings Liberados_files/6LTDv6XHiHN0N77QIFg2tidVvhh.jpg" alt="&#3246;&#3262;&#3248;&#3277;&#3221;&#3277;" loading="lazy" data-src="https://image.tmdb.org/t/p/w500/6LTDv6XHiHN0N77QIFg2tidVvhh.jpg">
+        <div class="netflix-slider-overlay">
+          <h3 class="netflix-slider-movie-title">&#3246;&#3262;&#3248;&#3277;&#3221;&#3277;</h3>
+          <div class="netflix-slider-meta">
+            <span class="netflix-slider-rating">&#11088; 4.0</span>
+            <span class="netflix-slider-year">2025</span>
+          </div>
+          <p class="netflix-slider-synopsis">Sinopse não disponível.</p>
+          <a class="netflix-slider-btn" href="https://wa.me/5596991169102?text=Ola!%20gostaria%20de%20adquirir%20um%20dos%20conteudos!" target="_blank" rel="noopener noreferrer">
+            &#9654; Assistir Agora
+          </a>
+        </div>
+      </div><div class="netflix-slider-card" data-index="19">
+        <img class="netflix-slider-poster" src="./Streamings Liberados_files/x8lAJde9fcXBFv5M2cOEv4YpIs5.jpg" alt="Na Zona Cinzenta" loading="lazy" data-src="https://image.tmdb.org/t/p/w500/x8lAJde9fcXBFv5M2cOEv4YpIs5.jpg">
+        <div class="netflix-slider-overlay">
+          <h3 class="netflix-slider-movie-title">Na Zona Cinzenta</h3>
+          <div class="netflix-slider-meta">
+            <span class="netflix-slider-rating">&#11088; 6.7</span>
+            <span class="netflix-slider-year">2026</span>
+          </div>
+          <p class="netflix-slider-synopsis">Dois especialistas em resgates embarcam na difícil missão de recuperar uma fortuna bilionária roubada. Para isso, eles p...</p>
+          <a class="netflix-slider-btn" href="https://wa.me/5596991169102?text=Ola!%20gostaria%20de%20adquirir%20um%20dos%20conteudos!" target="_blank" rel="noopener noreferrer">
+            &#9654; Assistir Agora
+          </a>
+        </div>
+      </div></div>
+    <div class="netflix-slider-arrow netflix-slider-arrow-right" id="netflix-slider-next" aria-label="Próximo">&#9654;</div>
+  </div>
+
+  <div class="netflix-slider-dots" id="netflix-slider-dots"><div class="netflix-slider-dot"></div><div class="netflix-slider-dot"></div><div class="netflix-slider-dot"></div><div class="netflix-slider-dot"></div></div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  // ============================================================
+  //  &#9881;&#65039; CONFIGURAÇÕES - ALTERE AQUI
+  // ============================================================
+  const TMDB_API_KEY = "a27a08b691f3abdf5347fa5a44421f04";
+  const LINK_ASSISTIR = "https://wa.me/5596991169102?text=Ola!%20gostaria%20de%20adquirir%20um%20dos%20conteudos!";
+  const AUTO_PLAY = true;
+  const AUTO_PLAY_INTERVAL = 6000;
+  // ============================================================
+
+  const track = document.getElementById('netflix-slider-track');
+  const container = document.getElementById('netflix-slider-container');
+  const prevBtn = document.getElementById('netflix-slider-prev');
+  const nextBtn = document.getElementById('netflix-slider-next');
+  const dotsContainer = document.getElementById('netflix-slider-dots');
+  const wrapper = document.getElementById('netflix-slider-wrapper');
+
+  let movies = [];
+  let currentIndex = 0;
+  let autoPlayTimer = null;
+  let isAutoPlaying = AUTO_PLAY;
+  let touchStartX = 0;
+  let touchEndX = 0;
+  let isDragging = false;
+
+  // ---- Utility: Truncate text ----
+  function truncate(str, max) {
+    if (!str) return '';
+    return str.length > max ? str.substring(0, max) + '...' : str;
+  }
+
+  // ---- Fetch movies from TMDB ----
+  async function fetchMovie() {
+    if (TMDB_API_KEY === "SUA_API_KEY_AQUI") {
+      track.innerHTML = '<div class="netflix-slider-error">&#9888;&#65039; Por favor, insira sua chave TMDB_API_KEY no código.</div>';
+      return;
+    }
+
+    track.innerHTML = '<div class="netflix-slider-loading"><div class="netflix-slider-spinner"></div>Carregando filmes...</div>';
+
+    try {
+      const response = await fetch(
+        `https://api.themoviedb.org/3/movie/popular?api_key=${TMDB_API_KEY}&language=pt-BR&page=1`
+      );
+
+      if (!response.ok) throw new Error('Falha ao buscar filmes');
+
+      const data = await response.json();
+      movies = data.results.slice(0, 40);
+
+      if (movies.length === 0) throw new Error('Nenhum filme encontrado');
+
+      renderMovies();
+      createDots();
+      startAutoPlay();
+
+    } catch (err) {
+      track.innerHTML = `<div class="netflix-slider-error">&#10060; Erro ao carregar filmes: ${err.message}<br><small>Verifique sua chave API e conexão.</small></div>`;
+      console.error('TMDB Error:', err);
+    }
+  }
+
+  // ---- Render movies cards ----
+  function renderMovies() {
+    track.innerHTML = '';
+
+    movies.forEach((movie, index) => {
+      const rating = movie.vote_average ? movie.vote_average.toFixed(1) : 'N/A';
+      const year = movie.release_date ? movie.release_date.substring(0, 4) : 'N/A';
+      const synopsis = movie.overview ? truncate(movie.overview, 120) : 'Sinopse não disponível.';
+      const posterUrl = movie.poster_path
+        ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+        : `https://via.placeholder.com/220x330/1a1a1a/666?text=Sem+Poster`;
+
+      const card = document.createElement('div');
+      card.className = 'netflix-slider-card';
+      card.setAttribute('data-index', index);
+
+      card.innerHTML = `
+        <img
+          class="netflix-slider-poster"
+          src="${posterUrl}"
+          alt="${movie.title}"
+          loading="lazy"
+          data-src="${posterUrl}"
+        />
+        <div class="netflix-slider-overlay">
+          <h3 class="netflix-slider-movie-title">${movie.title}</h3>
+          <div class="netflix-slider-meta">
+            <span class="netflix-slider-rating">&#11088; ${rating}</span>
+            <span class="netflix-slider-year">${year}</span>
+          </div>
+          <p class="netflix-slider-synopsis">${synopsis}</p>
+          <a class="netflix-slider-btn" href="${LINK_ASSISTIR}" target="_blank" rel="noopener noreferrer">
+            &#9654; Assistir Agora
+          </a>
+        </div>
+      `;
+
+      track.appendChild(card);
+    });
+
+    // Lazy loading observer
+    const lazyImages = track.querySelectorAll('.netflix-slider-poster');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+            }
+            observer.unobserve(img);
+          }
+        });
+      }, { rootMargin: '200px' });
+
+      lazyImages.forEach(img => observer.observe(img));
+    }
+  }
+
+  // ---- Dots navigation ----
+  function createDots() {
+    dotsContainer.innerHTML = '';
+    const totalPages = Math.ceil(movies.length / getVisibleCount());
+    for (let i = 0; i < totalPages; i++) {
+      const dot = document.createElement('div');
+      dot.className = 'netflix-slider-dot' + (i === 0 ? ' active' : '');
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function updateDots() {
+    const dots = dotsContainer.querySelectorAll('.netflix-slider-dot');
+    dots.forEach((d, i) => {
+      d.classList.toggle('active', i === currentIndex);
+    });
+  }
+
+  // ---- Get visible count based on screen ----
+  function getVisibleCount() {
+    const w = window.innerWidth;
+    if (w <= 480) return 2;
+    if (w <= 768) return 3;
+    if (w <= 992) return 4;
+    if (w <= 1200) return 5;
+    return 6;
+  }
+
+  // ---- Slide navigation ----
+  function getMaxIndex() {
+    return Math.max(0, movies.length - getVisibleCount());
+  }
+
+  function goToSlide(index) {
+    currentIndex = Math.max(0, Math.min(index, getMaxIndex()));
+    const cardWidth = track.querySelector('.netflix-slider-card')
+      ? track.querySelector('.netflix-slider-card').offsetWidth + 18
+      : 238;
+    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    updateDots();
+    resetAutoPlay();
+  }
+
+  function slideNext() {
+    if (currentIndex < getMaxIndex()) {
+      goToSlide(currentIndex + 1);
+    } else {
+      goToSlide(0);
+    }
+  }
+
+  function slidePrev() {
+    if (currentIndex > 0) {
+      goToSlide(currentIndex - 1);
+    } else {
+      goToSlide(getMaxIndex());
+    }
+  }
+
+  // ---- Auto play ----
+  function startAutoPlay() {
+    if (!isAutoPlaying) return;
+    stopAutoPlay();
+    autoPlayTimer = setInterval(slideNext, AUTO_PLAY_INTERVAL);
+  }
+
+  function stopAutoPlay() {
+    if (autoPlayTimer) {
+      clearInterval(autoPlayTimer);
+      autoPlayTimer = null;
+    }
+  }
+
+  function resetAutoPlay() {
+    if (isAutoPlaying) startAutoPlay();
+  }
+
+  // ---- Touch / Swipe ----
+  container.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    isDragging = true;
+    stopAutoPlay();
+  }, { passive: true });
+
+  container.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    touchEndX = e.touches[0].clientX;
+  }, { passive: true });
+
+  container.addEventListener('touchend', () => {
+    if (!isDragging) return;
+    isDragging = false;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) slideNext();
+      else slidePrev();
+    }
+    if (isAutoPlaying) startAutoPlay();
+  }, { passive: true });
+
+  // ---- Mouse drag (desktop) ----
+  let mouseDown = false;
+  let mouseStartX = 0;
+
+  container.addEventListener('mousedown', (e) => {
+    mouseDown = true;
+    mouseStartX = e.clientX;
+    stopAutoPlay();
+    container.style.cursor = 'grabbing';
+  });
+
+  container.addEventListener('mousemove', (e) => {
+    if (!mouseDown) return;
+    const diff = mouseStartX - e.clientX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) slideNext();
+      else slidePrev();
+      mouseStartX = e.clientX;
+    }
+  });
+
+  container.addEventListener('mouseup', () => {
+    mouseDown = false;
+    container.style.cursor = 'grab';
+    if (isAutoPlaying) startAutoPlay();
+  });
+
+  container.addEventListener('mouseleave', () => {
+    mouseDown = false;
+    container.style.cursor = 'grab';
+    if (isAutoPlaying) startAutoPlay();
+  });
+
+  // ---- Buttons ----
+  prevBtn.addEventListener('click', () => { slidePrev(); resetAutoPlay(); });
+  nextBtn.addEventListener('click', () => { slideNext(); resetAutoPlay(); });
+
+  // ---- Keyboard navigation ----
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') { slidePrev(); resetAutoPlay(); }
+    if (e.key === 'ArrowRight') { slideNext(); resetAutoPlay(); }
+  });
+
+  // ---- Resize handler ----
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      goToSlide(currentIndex);
+      createDots();
+    }, 250);
+  });
+
+  // ---- Pause on hover ----
+  wrapper.addEventListener('mouseenter', () => { stopAutoPlay(); });
+  wrapper.addEventListener('mouseleave', () => { if (isAutoPlaying) startAutoPlay(); });
+
+  // ---- Init ----
+  fetchMovie();
+
+})();
+</script>
+
+
+<!-- ===== FEATURES - CENTRAL DOS DIGITAIS ===== -->
+<style>
+  .cd-features *, .cd-features *::before, .cd-features *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cd-features {
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: transparent;
+  }
+
+  /* &#9472;&#9472; Grid &#9472;&#9472; */
+  .cd-features .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+  }
+
+  /* &#9472;&#9472; Cards discretos &#9472;&#9472; */
+  .cd-features .feature-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+    padding: 22px 16px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  .cd-features .feature-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(167,139,250,0.4);
+  }
+
+  /* &#9472;&#9472; Emoji &#9472;&#9472; */
+  .cd-features .icon {
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    display: block;
+    margin-bottom: 10px;
+    line-height: 1;
+    filter: grayscale(20%);
+  }
+
+  /* &#9472;&#9472; Título &#9472;&#9472; */
+  .cd-features .feature-card h3 {
+    font-size: clamp(0.85rem, 2.5vw, 1rem);
+    font-weight: 600;
+    color: #ccc;
+    margin-bottom: 6px;
+  }
+
+  /* &#9472;&#9472; Texto curto e discreto &#9472;&#9472; */
+  .cd-features .feature-card p {
+    font-size: clamp(0.72rem, 2vw, 0.85rem);
+    color: #777;
+    line-height: 1.4;
+  }
+
+  /* &#9472;&#9472; Animação suave &#9472;&#9472; */
+  .cd-features .feature-card.fade-in {
+    animation: cdFadeIn 0.5s ease forwards;
+    opacity: 0;
+  }
+  .cd-features .feature-card:nth-child(1) { animation-delay: 0.1s; }
+  .cd-features .feature-card:nth-child(2) { animation-delay: 0.2s; }
+  .cd-features .feature-card:nth-child(3) { animation-delay: 0.3s; }
+  .cd-features .feature-card:nth-child(4) { animation-delay: 0.4s; }
+
+  @keyframes cdFadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* &#9472;&#9472; Celular &#9472;&#9472; */
+  @media (max-width: 480px) {
+    .cd-features .features-grid {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    .cd-features .feature-card { padding: 20px 14px; }
+  }
+</style>
+
+<section class="cd-features">
+  <div class="features-grid">
+    <div class="feature-card fade-in">
+      <span class="icon">&#9989;</span>
+      <h3>Qualidade Premium</h3>
+      <p>HD, Full HD e 4K com áudio cristalino.</p>
+    </div>
+    <div class="feature-card fade-in">
+      <span class="icon">&#9889;</span>
+      <h3>Acesso Imediato</h3>
+      <p>Ativação rápida. Assista em minutos!</p>
+    </div>
+    <div class="feature-card fade-in">
+      <span class="icon">&#127911;</span>
+      <h3>Suporte 24h</h3>
+      <p>Equipe no WhatsApp sempre pronta.</p>
+    </div>
+    <div class="feature-card fade-in">
+      <span class="icon">&#128274;</span>
+      <h3>Compra Segura</h3>
+      <p>Dados protegidos com criptografia.</p>
+    </div>
+  </div>
+</section>
+
+
+        <a href="https://wa.me/5596991169102?text=Ola!%20Quero%20assinar!" target="_blank" class="btn-whatsapp" style="font-size: 1.3rem; padding: 18px 50px;">
+        </a>
+    </section>
+
+
+
+<hr style="border: none; height: 1px; background: currentColor; opacity: 0.2; margin: 25px 0;">
+
+    <!-- PRODUCTS -->
+    <section class="products" id="planos">
+        <h2>&#127916; Nossos Planos</h2>
+        <p class="subtitle">Escolha o melhor plano para você e economize de verdade!</p>
+
+        <div class="cards-container">
+
+            <!-- PLANO 1 - YOUTUBE PREMIUM FAMÍLIA &#11088; DESTAQUE -->
+<div class="card">
+    <div class="icon">&#9654;&#65039;</div>
+    <h3>YouTube Premium Família</h3>
+    <p class="desc">Até 6 membros da família! Sem anúncios, YouTube Music e Downloads. Tudo por um preço que cabe no bolso!</p>
+    <div class="price">R$20<span>/mês</span></div>
+    <div class="old-price">De R$54,90 por apenas R$20!</div>
+    <a href="https://wa.me/5596991169102?text=Ola!%20Quero%20o%20YouTube%20Premium%20Familia!" target="_blank" class="btn-whatsapp yt-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="white" style="vertical-align: middle; margin-right: 8px;">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+        </svg>
+        QUERO ASSINAR!
+    </a>
+</div>
+
+<!-- PLANO 2 -->
+<div class="card">
+    <div class="icon">&#127871;</div>
+    <h3>Netflix Completa</h3>
+    <p class="desc">Acesse TODO o catálogo da Netflix. Filmes, séries, documentários e lançamentos exclusivos!</p>
+    <div class="price">R$30<span>/mês</span></div>
+    <div class="old-price">De R$55,90 por apenas R$30!</div>
+    <a href="https://wa.me/5596991169102?text=Ola!%20Quero%20a%20Netflix%20Completa!" target="_blank" class="btn-whatsapp yt-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="white" style="vertical-align: middle; margin-right: 8px;">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+        </svg>
+        QUERO ASSINAR!
+    </a>
+</div>
+
+<!-- PLANO 3 - PARAMOUNT+ &#11088; NOVO -->
+<div class="card">
+    <div class="icon">&#11088;</div>
+    <h3>Paramount+ Completo</h3>
+    <p class="desc">Todo o conteúdo da Paramount+! Filmes, séries originais, futebol ao vivo e muito mais!</p>
+    <div class="price">R$12<span>/mês</span></div>
+    <div class="old-price">De R$39,90 por apenas R$12!</div>
+    <a href="https://wa.me/5596991169102?text=Ola!%20Quero%20a%20Paramount+!" target="_blank" class="btn-whatsapp yt-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="white" style="vertical-align: middle; margin-right: 8px;">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+        </svg>
+        QUERO ASSINAR!
+    </a>
+</div>
+
+<!-- PLANO 4 - NETFLIX TELA PRIVADA -->
+<div class="card">
+    <div class="icon">&#127871;</div>
+    <h3>Netflix Tela Privada</h3>
+    <p class="desc">Perfil privado com sua senha pessoal. Só você assiste, ninguém mexe no seu perfil!</p>
+    <div class="price">R$15<span>/mês</span></div>
+    <div class="old-price">De R$32,90 por apenas R$15!</div>
+    <a href="https://wa.me/5596991169102?text=Ola!%20Quero%20a%20Netflix%20tela%20privada!" target="_blank" class="btn-whatsapp yt-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="white" style="vertical-align: middle; margin-right: 8px;">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+        </svg>
+        QUERO ASSINAR!
+    </a>
+</div>
+
+<!-- PLANO 5 -->
+<div class="card">
+    <div class="icon">&#128250;</div>
+    <h3>TODOS OS CANAIS + BÔNUS<span class="bonus">&#128308; YouTube Premium INCLUSO!</span></h3>
+    <p class="desc">Todos os canais, filmes e séries liberados! TV ao vivo, streaming, tudo em um só lugar!</p>
+    <div class="price">R$30<span>/mês</span></div>
+    <div class="old-price">De R$59,00 por apenas R$30!</div>
+    <a href="https://wa.me/5596991169102?text=Ola!%20Quero%20todos%20os%20canais%20liberados" target="_blank" class="btn-whatsapp yt-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="white" style="vertical-align: middle; margin-right: 8px;">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+        </svg>
+        QUERO ASSINAR!
+    </a>
+</div>
+
+
+        </div>
+    </section>
+
+<hr style="border: none; height: 1px; background: currentColor; opacity: 0.2; margin: 25px 0;">
+
+
+<!-- ===== INÍCIO BLOCO AVALIAÇÕES - COLE AQUI ===== -->
+<section id="avaliacoes-section" style="
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 15px;
+  font-family: &#39;Segoe UI&#39;, Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+">
+
+  <!-- Título -->
+  <div style="text-align:center; margin-bottom:35px;">
+    <h2 style="
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      color: #ffffff;
+      margin:0 0 8px 0;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    ">O Que Nossos Clientes Dizem</h2>
+    <div style="
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:6px;
+      margin-top:8px;
+    ">
+      <span style="font-size:1.1rem;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span style="color:#666; font-size:0.95rem; font-weight:600;">4.9/5 — Mais de 234 avaliações</span>
+    </div>
+  </div>
+
+  <!-- Grid de Avaliações -->
+  <div style="
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap:20px;
+    align-items: stretch;
+  ">
+
+    <!-- AVALIAÇÃO 1 - YouTube Premium -->
+    <div class="review-card" style="
+      background: linear-gradient(135deg, #fff 0%, #fff5f5 100%);
+      border: 1px solid #ffe0e0;
+      border-radius: 16px;
+      padding: 24px 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+    " onmouseover="this.style.transform=&#39;translateY(-5px)&#39;; this.style.boxShadow=&#39;0 8px 25px rgba(0,0,0,0.12)&#39;" onmouseout="this.style.transform=&#39;translateY(0)&#39;; this.style.boxShadow=&#39;0 4px 15px rgba(0,0,0,0.06)&#39;">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+        <div style="
+          width:48px; height:48px; border-radius:50%;
+          background: linear-gradient(135deg, #ff0000, #cc0000);
+          display:flex; align-items:center; justify-content:center;
+          color:#fff; font-weight:800; font-size:1.1rem;
+          flex-shrink:0;
+        ">RF</div>
+        <div>
+          <div style="font-weight:700; color:#1a1a2e; font-size:1rem;">Rafael F.</div>
+          <div style="font-size:0.8rem; color:#888;">YouTube Premium &#9989;</div>
+        </div>
+      </div>
+      <div style="color:#f5a623; font-size:1rem; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p style="color:#444; font-size:0.92rem; line-height:1.6; margin:0 0 12px 0; flex-grow:1;">
+        "Melhor investimento que fiz! YouTube Premium funcionando perfeito, sem anúncios, música tocando em segundo plano. Recomendo demais! &#128293;"
+      </p>
+      <div style="font-size:0.78rem; color:#aaa; margin-top:auto;">Compra verificada &#9989; — Há 2 dias</div>
+    </div>
+
+    <!-- AVALIAÇÃO 2 - Netflix Tela Privada -->
+    <div class="review-card" style="
+      background: linear-gradient(135deg, #fff 0%, #f0fff4 100%);
+      border: 1px solid #c6f6d5;
+      border-radius: 16px;
+      padding: 24px 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+    " onmouseover="this.style.transform=&#39;translateY(-5px)&#39;; this.style.boxShadow=&#39;0 8px 25px rgba(0,0,0,0.12)&#39;" onmouseout="this.style.transform=&#39;translateY(0)&#39;; this.style.boxShadow=&#39;0 4px 15px rgba(0,0,0,0.06)&#39;">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+        <div style="
+          width:48px; height:48px; border-radius:50%;
+          background: linear-gradient(135deg, #e53e3e, #c53030);
+          display:flex; align-items:center; justify-content:center;
+          color:#fff; font-weight:800; font-size:1.1rem;
+          flex-shrink:0;
+        ">MS</div>
+        <div>
+          <div style="font-weight:700; color:#1a1a2e; font-size:1rem;">Marina S.</div>
+          <div style="font-size:0.8rem; color:#888;">Netflix Tela Privada &#9989;</div>
+        </div>
+      </div>
+      <div style="color:#f5a623; font-size:1rem; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p style="color:#444; font-size:0.92rem; line-height:1.6; margin:0 0 12px 0; flex-grow:1;">
+        "Netflix tela privada funcionando 100%! Perfil separado, ninguém mexe no meu histórico. Atendimento rápido demais. Amei! &#127871;"
+      </p>
+      <div style="font-size:0.78rem; color:#aaa; margin-top:auto;">Compra verificada &#9989; — Há 5 dias</div>
+    </div>
+
+    <!-- AVALIAÇÃO 3 - Netflix Conta Completa -->
+    <div class="review-card" style="
+      background: linear-gradient(135deg, #fff 0%, #fffaf0 100%);
+      border: 1px solid #feebc8;
+      border-radius: 16px;
+      padding: 24px 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+    " onmouseover="this.style.transform=&#39;translateY(-5px)&#39;; this.style.boxShadow=&#39;0 8px 25px rgba(0,0,0,0.12)&#39;" onmouseout="this.style.transform=&#39;translateY(0)&#39;; this.style.boxShadow=&#39;0 4px 15px rgba(0,0,0,0.06)&#39;">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+        <div style="
+          width:48px; height:48px; border-radius:50%;
+          background: linear-gradient(135deg, #dd6b20, #c05621);
+          display:flex; align-items:center; justify-content:center;
+          color:#fff; font-weight:800; font-size:1.1rem;
+          flex-shrink:0;
+        ">CL</div>
+        <div>
+          <div style="font-weight:700; color:#1a1a2e; font-size:1rem;">Carlos L.</div>
+          <div style="font-size:0.8rem; color:#888;">Netflix Conta Completa &#9989;</div>
+        </div>
+      </div>
+      <div style="color:#f5a623; font-size:1rem; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p style="color:#444; font-size:0.92rem; line-height:1.6; margin:0 0 12px 0; flex-grow:1;">
+        "Conta completa 4K, tudo liberado! Assisto no celular, tablet e TV. Valor absurdamente barato. Já sou cliente fixo! &#128250;"
+      </p>
+      <div style="font-size:0.78rem; color:#aaa; margin-top:auto;">Compra verificada &#9989; — Há 1 semana</div>
+    </div>
+
+    <!-- AVALIAÇÃO 4 - Paramount -->
+    <div class="review-card" style="
+      background: linear-gradient(135deg, #fff 0%, #f0f4ff 100%);
+      border: 1px solid #c3dafe;
+      border-radius: 16px;
+      padding: 24px 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+    " onmouseover="this.style.transform=&#39;translateY(-5px)&#39;; this.style.boxShadow=&#39;0 8px 25px rgba(0,0,0,0.12)&#39;" onmouseout="this.style.transform=&#39;translateY(0)&#39;; this.style.boxShadow=&#39;0 4px 15px rgba(0,0,0,0.06)&#39;">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+        <div style="
+          width:48px; height:48px; border-radius:50%;
+          background: linear-gradient(135deg, #3182ce, #2b6cb0);
+          display:flex; align-items:center; justify-content:center;
+          color:#fff; font-weight:800; font-size:1.1rem;
+          flex-shrink:0;
+        ">JP</div>
+        <div>
+          <div style="font-weight:700; color:#1a1a2e; font-size:1rem;">Juliana P.</div>
+          <div style="font-size:0.8rem; color:#888;">Paramount+ &#9989;</div>
+        </div>
+      </div>
+      <div style="color:#f5a623; font-size:1rem; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p style="color:#444; font-size:0.92rem; line-height:1.6; margin:0 0 12px 0; flex-grow:1;">
+        "Paramount+ liberado, assisto Yellowstone e tudo mais sem travar. Entregaram em menos de 10 minutos. Nota 1000! &#11088;"
+      </p>
+      <div style="font-size:0.78rem; color:#aaa; margin-top:auto;">Compra verificada &#9989; — Há 3 dias</div>
+    </div>
+
+    <!-- AVALIAÇÃO 5 - Canais Liberados -->
+    <div class="review-card" style="
+      background: linear-gradient(135deg, #fff 0%, #faf5ff 100%);
+      border: 1px solid #e9d8fd;
+      border-radius: 16px;
+      padding: 24px 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+    " onmouseover="this.style.transform=&#39;translateY(-5px)&#39;; this.style.boxShadow=&#39;0 8px 25px rgba(0,0,0,0.12)&#39;" onmouseout="this.style.transform=&#39;translateY(0)&#39;; this.style.boxShadow=&#39;0 4px 15px rgba(0,0,0,0.06)&#39;">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+        <div style="
+          width:48px; height:48px; border-radius:50%;
+          background: linear-gradient(135deg, #805ad5, #6b46c1);
+          display:flex; align-items:center; justify-content:center;
+          color:#fff; font-weight:800; font-size:1.1rem;
+          flex-shrink:0;
+        ">TB</div>
+        <div>
+          <div style="font-weight:700; color:#1a1a2e; font-size:1rem;">Thiago B.</div>
+          <div style="font-size:0.8rem; color:#888;">Canais Liberados &#9989;</div>
+        </div>
+      </div>
+      <div style="color:#f5a623; font-size:1rem; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p style="color:#444; font-size:0.92rem; line-height:1.6; margin:0 0 12px 0; flex-grow:1;">
+        "Canais liberados demais! HBO, ESPN, Disney+ tudo junto. Economizei muito dinheiro. Melhor vendedor do Brasil! &#127942;"
+      </p>
+      <div style="font-size:0.78rem; color:#aaa; margin-top:auto;">Compra verificada &#9989; — Há 4 dias</div>
+    </div>
+
+    <!-- AVALIAÇÃO 6 - Combo Geral -->
+    <div class="review-card" style="
+      background: linear-gradient(135deg, #fff 0%, #e6fffa 100%);
+      border: 1px solid #81e6d9;
+      border-radius: 16px;
+      padding: 24px 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+    " onmouseover="this.style.transform=&#39;translateY(-5px)&#39;; this.style.boxShadow=&#39;0 8px 25px rgba(0,0,0,0.12)&#39;" onmouseout="this.style.transform=&#39;translateY(0)&#39;; this.style.boxShadow=&#39;0 4px 15px rgba(0,0,0,0.06)&#39;">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+        <div style="
+          width:48px; height:48px; border-radius:50%;
+          background: linear-gradient(135deg, #38b2ac, #2c7a7b);
+          display:flex; align-items:center; justify-content:center;
+          color:#fff; font-weight:800; font-size:1.1rem;
+          flex-shrink:0;
+        ">AS</div>
+        <div>
+          <div style="font-weight:700; color:#1a1a2e; font-size:1rem;">Ana S.</div>
+          <div style="font-size:0.8rem; color:#888;">Combo Completo &#128293;</div>
+        </div>
+      </div>
+      <div style="color:#f5a623; font-size:1rem; margin-bottom:10px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p style="color:#444; font-size:0.92rem; line-height:1.6; margin:0 0 12px 0; flex-grow:1;">
+        "Peguei o combo com tudo! YouTube Premium + Netflix + Paramount + Canais. Tudo funcionando perfeito. Recomendo a todos! &#128175;"
+      </p>
+      <div style="font-size:0.78rem; color:#aaa; margin-top:auto;">Compra verificada &#9989; — Há 1 dia</div>
+    </div>
+
+  </div>
+
+</section>
+<!-- ===== FIM BLOCO AVALIAÇÕES ===== -->
+
+<hr style="border: none; height: 1px; background: currentColor; opacity: 0.2; margin: 25px 0;">
+
+  <!-- ===== INÍCIO DO BLOCO FAQ - COLE ONDE QUISER ===== -->
+<style>
+  .faq-wrap * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  .faq-wrap {
+    width: 100%;
+    max-width: 850px;
+    margin: 25px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: transparent;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .faq-title {
+    text-align: center;
+    padding: 18px 16px 12px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #888;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    transition: background 0.25s ease;
+  }
+
+  .faq-item:last-child { border-bottom: none; }
+
+  .faq-item:hover { background: rgba(255,255,255,0.03); }
+
+  .faq-q {
+    width: 100%;
+    padding: 14px 16px;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: #bbb;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.25s;
+  }
+
+  .faq-q:hover { color: #ddd; }
+
+  .faq-q .arrow {
+    font-size: 0.85rem;
+    color: #555;
+    transition: transform 0.3s ease, color 0.3s;
+    flex-shrink: 0;
+    margin-left: 10px;
+  }
+
+  .faq-item.open .faq-q .arrow {
+    transform: rotate(45deg);
+    color: #777;
+  }
+
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+  }
+
+  .faq-a-inner {
+    padding: 0 16px 16px;
+    font-size: 0.85rem;
+    line-height: 1.65;
+    color: #666;
+  }
+
+  .faq-item.open .faq-a {
+    max-height: 250px;
+  }
+
+  /* === RESPONSIVO === */
+  @media (max-width: 600px) {
+    .faq-wrap { margin: 15px 0; }
+    .faq-title { font-size: 0.95rem; padding: 14px 12px 10px; }
+    .faq-q { padding: 12px 12px; font-size: 0.85rem; }
+    .faq-a-inner { padding: 0 12px 14px; font-size: 0.82rem; }
+  }
+</style>
+
+<div class="faq-wrap">
+
+  <div class="faq-title">Perguntas Frequentes</div>
+
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <button class="faq-q">
+        Como vou receber o YouTube Premium?
+        <span class="arrow">+</span>
+      </button>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          Você vai receber um e-mail e senha com a assinatura do youtube premium já inclusa, basta logar no seu celular.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">
+        O que são canais liberados?
+        <span class="arrow">+</span>
+      </button>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          São contas que liberam acesso a canais premium como HBO, Telecine, Combate, SporTV, Discovery, History e muitos outros — tudo em um só lugar, sem pagar separado.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">
+        A Paramount+ é conta completa?
+        <span class="arrow">+</span>
+      </button>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          Sim. O plano inclui todas as telas e todas as funcionalidades premium.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">
+        Como vou ter acesso a Netflix?
+        <span class="arrow">+</span>
+      </button>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          Você vai receber o e-mail e senha com a assinatura inclusa para logar no site ou aplicativo da plataforma.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">
+        Os canais liberados funciona em celular, tablet e Smart TV?
+        <span class="arrow">+</span>
+      </button>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          Funciona em tudo: Android, iPhone, iPad, Smart TV (Samsung, LG, Android TV, Apple TV), Chromecast, Fire Stick, PC e Mac. Basta fazer login.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">
+        Como funciona o pagamento?
+        <span class="arrow">+</span>
+      </button>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          Aceitamos apenas PIX. Acesso liberado em até 5 minutos após confirmação.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">
+        É seguro? Posso perder o acesso?
+        <span class="arrow">+</span>
+      </button>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          Sim, 100% seguro. Usamos contas verificadas e oficiais. Você recebe seus próprios dados. Suporte 24h e reposição garantida durante o período contratado.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">
+        É obrigatório renovar todo mês?
+        <span class="arrow">+</span>
+      </button>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          Não. A renovação não é obrigatória. Quando quiser voltar a utilizar nossos serviços, basta entrar em contato conosco novamente.
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  (function() {
+    const items = document.querySelectorAll('.faq-item');
+    items.forEach(item => {
+      const btn = item.querySelector('.faq-q');
+      btn.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        items.forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  })();
+</script>
+<!-- ===== FIM DO BLOCO FAQ ===== -->
+
+<script>
+  (function() {
+    const items = document.querySelectorAll('.faq-item');
+    items.forEach(item => {
+      const btn = item.querySelector('.faq-question');
+      btn.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        // Fecha todos
+        items.forEach(i => i.classList.remove('active'));
+        // Abre o clicado (se estava fechado)
+        if (!isActive) item.classList.add('active');
+      });
+    });
+  })();
+</script>
+
+
+ <!-- Barra de confiança no final -->
+<div style="
+    text-align:center;
+    margin-top:40px;
+    padding:20px;
+    background: rgba(102,126,234,0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius:16px;
+    color:#fff;
+">
+    <div style="font-size: clamp(1rem, 3vw, 1.3rem); font-weight:800; margin-bottom:8px;">
+      &#128274; Compra 100% Segura &amp; Garantida
+    </div>
+    <div style="font-size:0.9rem; opacity:0.9; line-height:1.5;">
+      Suporte via WhatsApp • Entrega Imediata
+    </div>
+  </div>
+
+
+     <!-- ===== FLOATING WHATSAPP BUTTON - COLE ANTES DO </BODY> ===== -->
+<style>
+  #wa-float-btn {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    width: 62px;
+    height: 62px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999999;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: wa-wiggle 2.5s ease-in-out infinite;
+    text-decoration: none;
+    overflow: hidden;
+  }
+
+  #wa-float-btn svg {
+    width: 36px;
+    height: 36px;
+    fill: #ffffff;
+    transition: transform 0.3s ease;
+  }
+
+  #wa-float-btn:hover {
+    transform: scale(1.18) !important;
+    box-shadow: 0 8px 28px rgba(37, 211, 102, 0.65);
+    animation-play-state: paused;
+  }
+
+  #wa-float-btn:hover svg {
+    transform: rotate(12deg) scale(1.12);
+  }
+
+  #wa-label {
+    position: absolute;
+    right: 75px;
+    top: 50%;
+    transform: translateY(-50%) translateX(12px);
+    background: #ffffff;
+    color: #25D366;
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    opacity: 0;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.12);
+    letter-spacing: 0.3px;
+  }
+
+  #wa-float-btn:hover #wa-label {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+
+  @keyframes wa-wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    15%  { transform: rotate(4deg); }
+    30%  { transform: rotate(-3.5deg); }
+    45%  { transform: rotate(3deg); }
+    60%  { transform: rotate(-2deg); }
+    75%  { transform: rotate(1.5deg); }
+    90%  { transform: rotate(-0.5deg); }
+  }
+
+  /* ===== RESPONSIVO ===== */
+  @media (max-width: 768px) {
+    #wa-float-btn {
+      bottom: 16px;
+      right: 16px;
+      width: 58px;
+      height: 58px;
+    }
+    #wa-float-btn svg {
+      width: 32px;
+      height: 32px;
+    }
+    #wa-label {
+      right: 68px;
+      font-size: 12px;
+      padding: 6px 14px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    #wa-float-btn {
+      bottom: 12px;
+      right: 12px;
+      width: 54px;
+      height: 54px;
+    }
+    #wa-float-btn svg {
+      width: 28px;
+      height: 28px;
+    }
+    #wa-label {
+      font-size: 11px;
+      padding: 5px 12px;
+      right: 64px;
+    }
+  }
+
+  /* Tablet landscape */
+  @media (max-height: 500px) and (min-width: 768px) {
+    #wa-float-btn {
+      bottom: 12px;
+      right: 12px;
+      width: 50px;
+      height: 50px;
+    }
+    #wa-float-btn svg {
+      width: 26px;
+      height: 26px;
+    }
+  }
+</style>
+
+<a id="wa-float-btn" href="https://wa.me/5596991169102?text=Ola,%20pode%20me%20ajudar?" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp" style="z-index: 999999;">
+
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+  </svg>
+
+  <span id="wa-label">&#128172; Fale conosco</span>
+</a>
+
+<script>
+  // Anti-duplo clique (mobile)
+  (function() {
+    let lastTap = 0;
+    const btn = document.getElementById('wa-float-btn');
+    if (!btn) return;
+
+    btn.addEventListener('click', function(e) {
+      const now = Date.now();
+      if (now - lastTap < 400) {
+        e.preventDefault();
+        return;
+      }
+      lastTap = now;
+    });
+
+    // Garante que o z-index seja sempre o maior
+    setInterval(function() {
+      btn.style.zIndex = '999999';
+    }, 1000);
+  })();
+</script>
+<!-- ===== FIM DO BOTÃO WHATSAPP ===== -->
+
+ 
+
+    <footer>
+        <p>© 2025 Streamings Liberados — Todos os direitos reservados.</p>
+        <p style="margin-top: 5px; color: #444;">&#128242; Atendimento via WhatsApp: +55 96 99116-9102</p>
+    </footer>
+
+<!-- ========== INÍCIO DA PROTEÇÃO ========== -->
+<style>
+  /* Bloqueia seleção de texto */
+  * {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    -webkit-touch-callout: none !important;
+  }
+
+  /* Desativa arrastar imagens */
+  img, video {
+    pointer-events: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+  }
+
+  /* Impede seleção de emojis */
+  .no-select {
+    -webkit-user-select: none !important;
+    user-select: none !important;
+  }
+</style>
+
+<script>
+  // ===== BLOQUEIA CLIQUE DIREITO =====
+  document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+    return false;
+  });
+
+  // ===== BLOQUEIA ATALHOS DE TECLADO =====
+  document.addEventListener('keydown', function (e) {
+    // Ctrl+C, Ctrl+U, Ctrl+S, Ctrl+A, Ctrl+P, F12, PrintScreen
+    if (
+      (e.ctrlKey && (e.key === 'c' || e.key === 'u' || e.key === 's' || e.key === 'a' || e.key === 'p')) ||
+      e.key === 'F12' ||
+      e.key === 'PrintScreen'
+    ) {
+      e.preventDefault();
+      e.stopPropagation();
+      alert('&#9888;&#65039; Esta página é protegida. Cópia não permitida!');
+      return false;
+    }
+  });
+
+  // ===== BLOQUEIA DRAG (ARRASTAR) =====
+  document.addEventListener('dragstart', function (e) {
+    e.preventDefault();
+    return false;
+  });
+
+  // ===== BLOQUEIA COPIAR COLAR =====
+  document.addEventListener('copy', function (e) {
+    e.preventDefault();
+    alert('&#9888;&#65039; Conteúdo protegido! Cópia não permitida.');
+    return false;
+  });
+
+  document.addEventListener('cut', function (e) {
+    e.preventDefault();
+    return false;
+  });
+
+  document.addEventListener('paste', function (e) {
+    e.preventDefault();
+    return false;
+  });
+
+  // ===== BLOQUEIA PRINT SCREEN (parcial) =====
+  document.addEventListener('keyup', function (e) {
+    if (e.key === 'PrintScreen') {
+      document.body.innerHTML = '<h1 style="text-align:center;margin-top:50%;">&#9888;&#65039; Conteúdo Protegido</h1>';
+      setTimeout(function () {
+        location.reload();
+      }, 100);
+    }
+  });
+
+  // ===== BLOQUEIA SELEÇÃO EM INPUTS (se houver) =====
+  document.querySelectorAll('input, textarea').forEach(function (el) {
+    el.setAttribute('readonly', 'readonly');
+    el.style.userSelect = 'none';
+  });
+
+  // ===== BLOQUEIA DEV TOOLS (F12) =====
+  document.addEventListener('keydown', function (e) {
+    if (e.keyCode === 123) { // F12
+      e.preventDefault();
+      return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode === 73) { // Ctrl+Shift+I
+      e.preventDefault();
+      return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode === 74) { // Ctrl+Shift+J
+      e.preventDefault();
+      return false;
+    }
+    if (e.ctrlKey && e.keyCode === 85) { // Ctrl+U (ver código fonte)
+      e.preventDefault();
+      return false;
+    }
+  });
+
+  // ===== BLOQUEIA INSPEÇÃO VIA MENU =====
+  window.onload = function () {
+    // Detecta se o dev tools está aberto
+    setInterval(function () {
+      if (window.outerWidth - window.innerWidth > 200 ||
+          window.outerHeight - window.innerHeight > 200) {
+        document.body.innerHTML = '<h1 style="text-align:center;margin-top:50%;color:red;">&#9888;&#65039; Não use o DevTools!</h1>';
+      }
+    }, 1000);
+  };
+
+  // ===== BLOQUEIA INCORPORAÇÃO (iframe) =====
+  if (window.top !== window.self) {
+    document.body.innerHTML = '<h1 style="text-align:center;margin-top:50%;">Acesso negado!</h1>';
+  }
+
+  // ===== BLOQUEIA SELEÇÃO DUPLA EM EMOJIS =====
+  document.addEventListener('mousedown', function (e) {
+    if (e.detail === 2) {
+      e.preventDefault();
+    }
+  });
+
+  console.log = function () {};
+  console.warn = function () {};
+  console.error = function () {};
+  console.info = function () {};
+</script>
+<!-- ========== FIM DA PROTEÇÃO ========== -->
+
+<!-- ===== CINEMA BACKGROUND - COLE AQUI ===== -->
+<div id="cinema-bg-wrapper" style="
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+">
+
+    <!-- FUNDO ESCURO CINEMATOGRÁFICO -->
+    <div id="cinema-bg" style="
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: radial-gradient(ellipse at 50% 50%, #1a1a2e 0%, #0a0a0f 70%, #000000 100%);
+        animation: cinemaPulse 8s ease-in-out infinite alternate;
+    "></div>
+
+    <!-- EFEITO GRÃO DE FILME (FILM GRAIN) -->
+    <div id="film-grain" style="
+        position: absolute;
+        top: -50%; left: -50%;
+        width: 200%; height: 200%;
+        background-image: url(&#39;data:image/svg+xml,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 256 256&quot;&gt;&lt;filter id=&quot;noise&quot;&gt;&lt;feTurbulence type=&quot;fractalNoise&quot; baseFrequency=&quot;0.9&quot; numOctaves=&quot;4&quot; stitchTiles=&quot;stitch&quot;/&gt;&lt;feColorMatrix type=&quot;saturate&quot; values=&quot;0&quot;/&gt;&lt;/filter&gt;&lt;rect width=&quot;100%&quot; height=&quot;100%&quot; filter=&quot;url(%23noise)&quot; opacity=&quot;0.4&quot;/&gt;&lt;/svg&gt;&#39;);
+        opacity: 0.15;
+        animation: grainMove 0.5s steps(10) infinite;
+        z-index: 2;
+    "></div>
+
+    <!-- LIGHT LEAKS (VAZAMENTOS DE LUZ) -->
+    <div id="light-leak-1" style="
+        position: absolute;
+        top: -20%; right: -10%;
+        width: 60%; height: 140%;
+        background: linear-gradient(135deg, rgba(255,107,53,0.08) 0%, rgba(255,60,60,0.04) 40%, transparent 70%);
+        transform: rotate(25deg);
+        animation: leakMove1 12s ease-in-out infinite alternate;
+        z-index: 3;
+    "></div>
+    <div id="light-leak-2" style="
+        position: absolute;
+        bottom: -20%; left: -10%;
+        width: 50%; height: 130%;
+        background: linear-gradient(315deg, rgba(59,130,246,0.06) 0%, rgba(139,92,246,0.04) 40%, transparent 70%);
+        transform: rotate(-20deg);
+        animation: leakMove2 15s ease-in-out infinite alternate;
+        z-index: 3;
+    "></div>
+
+    <!-- VIGNETTE (BORDAS ESCURAS) -->
+    <div id="vignette" style="
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.7) 100%);
+        z-index: 4;
+    "></div>
+
+    <!-- PARTÍCULAS FLUTUANTES (POEIRA NO CINEMA) -->
+    <div id="particles" style="
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: 5;
+        overflow: hidden;
+    "><div class="cinema-particle" style="width: 2.05744px; height: 2.05744px; left: 62.1548%; animation-duration: 13.0051s; animation-delay: 6.73721s;"></div><div class="cinema-particle" style="width: 3.12562px; height: 3.12562px; left: 22.1269%; animation-duration: 20.4161s; animation-delay: 2.60438s;"></div><div class="cinema-particle" style="width: 1.50489px; height: 1.50489px; left: 94.8852%; animation-duration: 10.6123s; animation-delay: 0.0113059s;"></div><div class="cinema-particle" style="width: 1.77051px; height: 1.77051px; left: 51.5174%; animation-duration: 18.0736s; animation-delay: 6.37594s;"></div><div class="cinema-particle" style="width: 3.79278px; height: 3.79278px; left: 38.6667%; animation-duration: 12.1509s; animation-delay: 6.8282s;"></div><div class="cinema-particle" style="width: 1.459px; height: 1.459px; left: 32.4851%; animation-duration: 16.8344s; animation-delay: 1.08637s;"></div><div class="cinema-particle" style="width: 1.07686px; height: 1.07686px; left: 83.9125%; animation-duration: 10.8337s; animation-delay: 7.30463s;"></div><div class="cinema-particle" style="width: 3.00248px; height: 3.00248px; left: 31.8112%; animation-duration: 19.5368s; animation-delay: 3.11471s;"></div><div class="cinema-particle" style="width: 3.52023px; height: 3.52023px; left: 82.6689%; animation-duration: 23.6157s; animation-delay: 4.31551s;"></div><div class="cinema-particle" style="width: 1.39927px; height: 1.39927px; left: 9.5472%; animation-duration: 24.5402s; animation-delay: 4.44072s;"></div><div class="cinema-particle" style="width: 2.34952px; height: 2.34952px; left: 0.509728%; animation-duration: 16.5867s; animation-delay: 8.31049s;"></div><div class="cinema-particle" style="width: 1.12325px; height: 1.12325px; left: 84.7855%; animation-duration: 21.53s; animation-delay: 4.43058s;"></div><div class="cinema-particle" style="width: 1.28155px; height: 1.28155px; left: 6.89082%; animation-duration: 15.3704s; animation-delay: 6.06683s;"></div><div class="cinema-particle" style="width: 2.7415px; height: 2.7415px; left: 55.2405%; animation-duration: 16.7446s; animation-delay: 5.87193s;"></div><div class="cinema-particle" style="width: 3.59031px; height: 3.59031px; left: 86.6246%; animation-duration: 20.3236s; animation-delay: 1.14997s;"></div><div class="cinema-particle" style="width: 2.91473px; height: 2.91473px; left: 74.3714%; animation-duration: 14.9626s; animation-delay: 3.6223s;"></div><div class="cinema-particle" style="width: 2.52454px; height: 2.52454px; left: 2.13324%; animation-duration: 14.9612s; animation-delay: 6.65762s;"></div><div class="cinema-particle" style="width: 1.66869px; height: 1.66869px; left: 61.1328%; animation-duration: 21.7831s; animation-delay: 0.310129s;"></div><div class="cinema-particle" style="width: 1.34557px; height: 1.34557px; left: 72.7773%; animation-duration: 17.2521s; animation-delay: 7.36324s;"></div><div class="cinema-particle" style="width: 1.94655px; height: 1.94655px; left: 17.9317%; animation-duration: 24.5852s; animation-delay: 9.97606s;"></div><div class="cinema-particle" style="width: 3.7269px; height: 3.7269px; left: 34.4192%; animation-duration: 13.7163s; animation-delay: 8.97548s;"></div><div class="cinema-particle" style="width: 3.89603px; height: 3.89603px; left: 90.0501%; animation-duration: 23.3077s; animation-delay: 9.97717s;"></div><div class="cinema-particle" style="width: 3.80583px; height: 3.80583px; left: 0.0296361%; animation-duration: 19.6808s; animation-delay: 6.9497s;"></div><div class="cinema-particle" style="width: 3.08144px; height: 3.08144px; left: 78.0609%; animation-duration: 10.5836s; animation-delay: 6.63895s;"></div><div class="cinema-particle" style="width: 3.78262px; height: 3.78262px; left: 0.274016%; animation-duration: 12.6781s; animation-delay: 5.4559s;"></div><div class="cinema-particle" style="width: 1.78718px; height: 1.78718px; left: 23.0125%; animation-duration: 14.8741s; animation-delay: 6.37079s;"></div><div class="cinema-particle" style="width: 2.32937px; height: 2.32937px; left: 15.205%; animation-duration: 21.7539s; animation-delay: 7.07895s;"></div><div class="cinema-particle" style="width: 2.33936px; height: 2.33936px; left: 9.02473%; animation-duration: 13.0796s; animation-delay: 1.39842s;"></div><div class="cinema-particle" style="width: 2.84015px; height: 2.84015px; left: 29.8624%; animation-duration: 21.9795s; animation-delay: 1.11587s;"></div><div class="cinema-particle" style="width: 2.61771px; height: 2.61771px; left: 91.222%; animation-duration: 16.7167s; animation-delay: 7.4486s;"></div></div>
+
+    <!-- LINHAS CINEMATOGRÁFICAS (LETTERBOX) -->
+    <div id="letterbox-top" style="
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 4%;
+        background: #000;
+        z-index: 6;
+    "></div>
+    <div id="letterbox-bottom" style="
+        position: absolute;
+        bottom: 0; left: 0;
+        width: 100%;
+        height: 4%;
+        background: #000;
+        z-index: 6;
+    "></div>
+
+    <!-- BRILHO CENTRAL SUTIL -->
+    <div id="center-glow" style="
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%; height: 60%;
+        background: radial-gradient(ellipse at center, rgba(255,255,255,0.03) 0%, transparent 70%);
+        z-index: 1;
+        animation: glowPulse 6s ease-in-out infinite alternate;
+    "></div>
+
+</div>
+
+<style>
+/* ===== ANIMAÇÕES ===== */
+@keyframes cinemaPulse {
+    0%   { filter: brightness(0.85) saturate(1.1); }
+    100% { filter: brightness(1) saturate(1); }
+}
+
+@keyframes grainMove {
+    0%   { transform: translate(0, 0); }
+    10%  { transform: translate(-5%, -5%); }
+    20%  { transform: translate(5%, 5%); }
+    30%  { transform: translate(-5%, 5%); }
+    40%  { transform: translate(5%, -5%); }
+    50%  { transform: translate(-3%, -3%); }
+    60%  { transform: translate(3%, 3%); }
+    70%  { transform: translate(-5%, 0%); }
+    80%  { transform: translate(5%, 0%); }
+    90%  { transform: translate(0%, -5%); }
+    100% { transform: translate(0, 0); }
+}
+
+@keyframes leakMove1 {
+    0%   { transform: rotate(25deg) translateX(0); opacity: 0.6; }
+    50%  { transform: rotate(30deg) translateX(30px); opacity: 0.9; }
+    100% { transform: rotate(20deg) translateX(-20px); opacity: 0.5; }
+}
+
+@keyframes leakMove2 {
+    0%   { transform: rotate(-20deg) translateX(0); opacity: 0.5; }
+    50%  { transform: rotate(-25deg) translateX(-25px); opacity: 0.8; }
+    100% { transform: rotate(-15deg) translateX(15px); opacity: 0.4; }
+}
+
+@keyframes glowPulse {
+    0%   { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+    100% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+/* ===== PARTÍCULAS ===== */
+.cinema-particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    animation: floatParticle linear infinite;
+}
+
+@keyframes floatParticle {
+    0%   { transform: translateY(100vh) translateX(0) scale(0); opacity: 0; }
+    10%  { opacity: 1; }
+    90%  { opacity: 1; }
+    100% { transform: translateY(-10vh) translateX(100px) scale(1); opacity: 0; }
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+    #letterbox-top, #letterbox-bottom { height: 6%; }
+    #film-grain { opacity: 0.1; }
+}
+
+@media (max-width: 480px) {
+    #letterbox-top, #letterbox-bottom { height: 8%; }
+}
+</style>
+
+<script>
+(function() {
+    // Gera partículas flutuantes (poeira no cinema)
+    var container = document.getElementById('particles');
+    if (!container) return;
+
+    for (var i = 0; i < 30; i++) {
+        var p = document.createElement('div');
+        p.className = 'cinema-particle';
+        var size = Math.random() * 3 + 1;
+        p.style.width  = size + 'px';
+        p.style.height = size + 'px';
+        p.style.left   = Math.random() * 100 + '%';
+        p.style.animationDuration = (Math.random() * 15 + 10) + 's';
+        p.style.animationDelay    = (Math.random() * 10) + 's';
+        container.appendChild(p);
+    }
+})();
+</script>
+<!-- ===== FIM CINEMA BACKGROUND ===== -->
+
+<!-- ================= POPUP PROMOÇÃO ================= -->
+<div id="promoPopup" class="popup-overlay">
+    <div class="popup-box">
+
+        <button class="popup-close" onclick="fecharPopup()">
+    &times;
+</button>
+
+        <div class="popup-badge">
+    OFERTA LIMITADA
+</div>
+
+        <h2>
+    📺TODOS OS CANAIS
+    <span>LIBERADOS</span>
+</h2>
+
+<p class="popup-text">
+    Aproveite a promoção especial e tenha acesso a um catálogo completo de conteúdos.
+</p>
+
+<div class="popup-price">
+    Apenas
+    <strong>R$ 30,00</strong>
+</div>
+
+<div class="popup-bonus">
+    🎁 <strong style="color:#fff;">BÔNUS EXCLUSIVO</strong><br><br>
+    ▶️ YOUTUBE PREMIUM INCLUSO
+</div>
+
+        <a href="https://wa.me/5596991169102?text=Ola! Quero aproveitar o valor promocional dos canais liberados."
+class="popup-btn">
+    🔥​QUERO APROVEITAR A PROMOÇÃO
+</a>
+
+    </div>
+</div>
+
+<style>
+.popup-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(8px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:999999;
+    animation:fadeIn .4s;
+}
+
+.popup-box{
+    width:90%;
+    max-width:430px;
+    background:linear-gradient(145deg,#1a1a2e,#16213e);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:22px;
+    padding:30px;
+    text-align:center;
+    color:#fff;
+    position:relative;
+    box-shadow:0 20px 60px rgba(0,0,0,.6);
+    animation:popupUp .4s;
+}
+
+.popup-close{
+    position:absolute;
+    top:12px;
+    right:12px;
+    width:35px;
+    height:35px;
+    border:none;
+    border-radius:50%;
+    background:#ffffff20;
+    color:#fff;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.popup-close:hover{
+    background:#e50914;
+}
+
+.popup-badge{
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#e50914,#ff4444);
+    font-weight:700;
+    margin-bottom:18px;
+    animation:pulse 2s infinite;
+}
+
+.popup-box h2{
+    font-size:2rem;
+    margin-bottom:15px;
+    line-height:1.2;
+}
+
+.popup-box h2 span{
+    color:#25D366;
+}
+
+.popup-text{
+    color:#ccc;
+    margin-bottom:20px;
+}
+
+.popup-price{
+    font-size:1.3rem;
+    margin-bottom:18px;
+}
+
+.popup-price strong{
+    display:block;
+    color:#25D366;
+    font-size:3rem;
+    font-weight:900;
+}
+
+.popup-bonus{
+    background: linear-gradient(135deg, #FF0000, #CC0000);
+    color: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 25px; /* Espaço entre o bônus e o botão */
+}
+
+.popup-btn{
+    display:block;
+    text-decoration:none;
+    background:linear-gradient(135deg,#25D366,#128C7E);
+    color:#fff;
+    padding:16px;
+    border-radius:50px;
+    font-weight:700;
+    font-size:1.1rem;
+    transition:.3s;
+}
+
+.popup-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 10px 30px rgba(37,211,102,.5);
+}
+
+@keyframes popupUp{
+    from{
+        opacity:0;
+        transform:translateY(30px) scale(.9);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+@keyframes pulse{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.05);}
+}
+</style>
+
+<script>
+function fecharPopup(){
+    document.getElementById("promoPopup").style.display="none";
+}
+
+function fecharPopup(){
+    document.getElementById("promoPopup").style.display = "none";
+}
+
+// Exibe apenas uma vez após 2 segundos
+window.onload = function () {
+    setTimeout(function () {
+        document.getElementById("promoPopup").style.display = "flex";
+    }, 2000);
+};
+</script>
+<!-- ================= FIM POPUP ================= -->
+
+</body></html>
