@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0050)https://www.lncc.br/~borges/php/testar.html#planos -->
-<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset="UTF-8">
+<html lang="pt-BR"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Streamings Liberados &#127916; - Assine Já!</title>
@@ -64,7 +64,7 @@
 
         /* ===== HERO SECTION ===== */
         .hero {
-            margin-top: 55px;
+            margin-top: 20px;
             min-height: 60vh;
             display: flex;
             flex-direction: column;
@@ -784,121 +784,6 @@
 </script>
 <!-- ===== FIM DA NOTIFICAÇÃO ===== -->
 
-<!-- ===== BOTÃO ÂNCORA - PLANOS (FUNCIONA EM TUDO) ===== -->
-<div style="
-    text-align: center;
-    margin: 30px auto 10px;
-    max-width: 600px;
-    padding: 0 20px;
-">
-    <a href="https://www.lncc.br/~borges/php/testar.html#planos" onclick="event.preventDefault(); 
-                document.querySelector(&#39;#planos&#39;).scrollIntoView({behavior:&#39;smooth&#39;, block:&#39;start&#39;}); 
-                return false;" id="plan-btn" style="
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        background: linear-gradient(135deg, #e50914, #b20710);
-        color: #fff;
-        text-decoration: none;
-        padding: 16px 40px;
-        border-radius: 50px;
-        font-family: &#39;Poppins&#39;, sans-serif;
-        font-weight: 700;
-        font-size: clamp(1rem, 3.5vw, 1.15rem);
-        letter-spacing: 0.5px;
-        box-shadow: 0 4px 20px rgba(229, 9, 20, 0.35);
-        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        border: 2px solid rgba(255,255,255,0.15);
-        position: relative;
-        overflow: hidden;
-        -webkit-tap-highlight-color: transparent;
-        min-height: 52px;
-        cursor: pointer;
-    ">
-        <span style="font-size: 1.3rem;"></span>
-        &#128269; Ver Planos 
-        <span style="font-size: 1.3rem;"></span>
-    </a>
-</div>
-
-<style>
-/* ===== SMOOTH SCROLL GLOBAL ===== */
-html {
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-}
-
-/* ===== BOTÃO - TODOS OS DISPOSITIVOS ===== */
-#plan-btn {
-    -webkit-user-select: none;
-    user-select: none;
-    -webkit-touch-callout: none;
-    touch-action: manipulation;
-}
-
-/* Desktop hover */
-#plan-btn:hover {
-    transform: translateY(-3px) scale(1.04);
-    box-shadow: 0 8px 30px rgba(229, 9, 20, 0.5);
-    border-color: rgba(255,255,255,0.3);
-}
-
-/* Mobile/Tablet active (toque) */
-#plan-btn:active {
-    transform: scale(0.95);
-    box-shadow: 0 2px 10px rgba(229, 9, 20, 0.4);
-    transition: all 0.1s;
-}
-
-/* Animação de pulso suave */
-@keyframes planPulse {
-    0%, 100% { box-shadow: 0 4px 20px rgba(229, 9, 20, 0.35); }
-    50% { box-shadow: 0 6px 28px rgba(229, 9, 20, 0.5); }
-}
-
-#plan-btn {
-    animation: planPulse 2.5s ease-in-out infinite;
-}
-
-/* Tablet (768px - 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-    #plan-btn {
-        padding: 14px 36px;
-        font-size: 1.05rem;
-    }
-}
-
-/* Mobile pequeno (até 480px) */
-@media (max-width: 480px) {
-    #plan-btn {
-        padding: 14px 28px;
-        font-size: 1rem;
-        gap: 8px;
-    }
-    #plan-btn span {
-        font-size: 1.1rem;
-    }
-}
-
-/* Mobile muito pequeno (até 360px) */
-@media (max-width: 360px) {
-    #plan-btn {
-        padding: 12px 24px;
-        font-size: 0.9rem;
-    }
-}
-</style>
-
-
-    <!-- HERO -->
-    <section class="hero">
-        <h1>STREAMINGS <span class="highlight">LIBERADOS</span><br>POR PREÇOS <span class="highlight">INACREDITÁVEIS!</span></h1>
-        <p>Filmes, séries, canais ao vivo e muito mais — tudo liberado na sua tela por uma fração do preço. Sem fidelidade, sem burocracia!</p>
-
-
-<hr style="border: none; height: 1px; background: currentColor; opacity: 0.2; margin: 25px 0;">
-
 <!-- ============================================================ -->
 <!--  NETFLIX-STYLE MOVIE CAROUSEL - COPY & PASTE READY           -->
 <!--  Substitua TMDB_API_KEY e LINK_ASSISTIR antes de usar        -->
@@ -1469,7 +1354,7 @@ html {
   //  &#9881;&#65039; CONFIGURAÇÕES - ALTERE AQUI
   // ============================================================
   const TMDB_API_KEY = "a27a08b691f3abdf5347fa5a44421f04";
-  const LINK_ASSISTIR = "https://wa.me/5596991169102?text=Ola!%20gostaria%20de%20adquirir%20um%20dos%20conteudos!";
+  const LINK_ASSISTIR = "https://wa.me/5596991169102?text=Ola!%20gostaria%20de%20assistir%20filmes%20e%20series%20como faz?";
   const AUTO_PLAY = true;
   const AUTO_PLAY_INTERVAL = 6000;
   // ============================================================
@@ -1749,6 +1634,123 @@ html {
 
 })();
 </script>
+
+<!-- ===== BOTÃO ÂNCORA - PLANOS (FUNCIONA EM TUDO) ===== -->
+<div style="
+    text-align: center;
+    margin: 30px auto 10px;
+    max-width: 600px;
+    padding: 0 20px;
+">
+    <a href="https://www.lncc.br/~borges/php/testar.html#planos" onclick="event.preventDefault(); 
+                document.querySelector(&#39;#planos&#39;).scrollIntoView({behavior:&#39;smooth&#39;, block:&#39;start&#39;}); 
+                return false;" id="plan-btn" style="
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: linear-gradient(135deg, #e50914, #b20710);
+        color: #fff;
+        text-decoration: none;
+        padding: 16px 40px;
+        border-radius: 50px;
+        font-family: &#39;Poppins&#39;, sans-serif;
+        font-weight: 700;
+        font-size: clamp(1rem, 3.5vw, 1.15rem);
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 20px rgba(229, 9, 20, 0.35);
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        border: 2px solid rgba(255,255,255,0.15);
+        position: relative;
+        overflow: hidden;
+        -webkit-tap-highlight-color: transparent;
+        min-height: 52px;
+        cursor: pointer;
+    ">
+        <span style="font-size: 1.3rem;"></span>
+        &#128269; Ver Planos 
+        <span style="font-size: 1.3rem;"></span>
+    </a>
+</div>
+
+<style>
+/* ===== SMOOTH SCROLL GLOBAL ===== */
+html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* ===== BOTÃO - TODOS OS DISPOSITIVOS ===== */
+#plan-btn {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    touch-action: manipulation;
+}
+
+/* Desktop hover */
+#plan-btn:hover {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 8px 30px rgba(229, 9, 20, 0.5);
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Mobile/Tablet active (toque) */
+#plan-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 10px rgba(229, 9, 20, 0.4);
+    transition: all 0.1s;
+}
+
+/* Animação de pulso suave */
+@keyframes planPulse {
+    0%, 100% { box-shadow: 0 4px 20px rgba(229, 9, 20, 0.35); }
+    50% { box-shadow: 0 6px 28px rgba(229, 9, 20, 0.5); }
+}
+
+#plan-btn {
+    animation: planPulse 2.5s ease-in-out infinite;
+}
+
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #plan-btn {
+        padding: 14px 36px;
+        font-size: 1.05rem;
+    }
+}
+
+/* Mobile pequeno (até 480px) */
+@media (max-width: 480px) {
+    #plan-btn {
+        padding: 14px 28px;
+        font-size: 1rem;
+        gap: 8px;
+    }
+    #plan-btn span {
+        font-size: 1.1rem;
+    }
+}
+
+/* Mobile muito pequeno (até 360px) */
+@media (max-width: 360px) {
+    #plan-btn {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+}
+</style>
+
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>STREAMINGS <span class="highlight">LIBERADOS</span><br>POR PREÇOS <span class="highlight">INACREDITÁVEIS!</span></h1>
+        <p>Filmes, séries, canais ao vivo e muito mais — tudo liberado na sua tela por uma fração do preço. Sem fidelidade, sem burocracia!</p>
+
+
+<hr style="border: none; height: 1px; background: currentColor; opacity: 0.2; margin: 25px 0;">
+
+
 
 
 <!-- ===== FEATURES - CENTRAL DOS DIGITAIS ===== -->
@@ -2959,12 +2961,12 @@ html {
 
 <div class="popup-bonus">
     🎁 <strong style="color:#fff;">BÔNUS EXCLUSIVO</strong><br><br>
-    ▶️ YOUTUBE PREMIUM INCLUSO
+    🔴 YOUTUBE PREMIUM INCLUSO
 </div>
 
         <a href="https://wa.me/5596991169102?text=Ola! Quero aproveitar o valor promocional dos canais liberados."
 class="popup-btn">
-    🔥​QUERO APROVEITAR A PROMOÇÃO
+    🔥QUERO APROVEITAR A PROMOÇÃO
 </a>
 
     </div>
